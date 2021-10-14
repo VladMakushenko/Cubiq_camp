@@ -1,0 +1,91 @@
+.top_menu {
+    display: flex;
+    align-items: center;
+    margin-top: 5.5vh;
+    margin-right: 6.25vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &__logo {
+        display: none;
+
+        img {
+            width: 22.5vw;
+            height: auto;
+            min-width: 103px;
+        }
+    }
+
+    &__lines {
+        display: none;
+
+        span {
+            display: block;
+            width: 9vw;
+            min-width: 41px;
+            height: 2px;
+            background-color: $main_color;
+
+            &:not(:last-of-type) {
+                margin-bottom: 7px;
+            }
+        }
+    }
+
+    &__phone {
+        @include fluid-text($tablet_wide, $max_device_width, 20px, 30px, 30px, 40px);
+        margin-right: 3.125vw;
+    }
+
+    .socials_list {
+        display: flex;
+        align-items: center;
+
+        &__item {
+            width: 2.35vw;
+            height: 2.35vw;
+        }
+
+        &__item:not(:last-of-type) {
+            margin-right: 15px;
+        }
+
+        &__item svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @include max-width($tablet_wide) {
+
+        &__phone {
+            @include fluid-text($phone_small, $tablet, 15px, 25px, 20px, 34px);
+        }
+
+        .socials_list__item {
+            width: 38px;
+            height: 38px;
+        }
+    }
+
+    @include max-width($tablet) {
+        position: static;
+        margin: 0;
+        justify-content: space-between;
+        padding: 6.5vw 6.5vw 0;
+
+        &__logo,
+        &__lines {
+            display: block;
+        }
+
+        .socials_list {
+            display: none;
+        }
+    }
+
+    @include max-width($phone_tiny) {
+        padding: 5vw 2.5vw 0;
+    }
+}

@@ -1,0 +1,18 @@
+.link {
+    position: relative;
+
+    &--go_to {
+        color: $button_color;
+        padding-right: 40px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: calc(50% - 16px / 2);
+            right: 0;
+            width: 24px;
+            height: 16px;
+            background: url('../img/icons/link_arrow.svg') no-repeat center / contain;
+        }
+    }
+}

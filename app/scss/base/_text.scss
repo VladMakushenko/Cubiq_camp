@@ -1,0 +1,58 @@
+h1, h2, h3, .h1, .h2, .h3 {
+    text-transform: uppercase;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+}
+
+.h1 {
+    @include fluid-text($min_device_width, $max_device_width, $h1_font_size_min, $h1_font_size_max, $h1_line_height_min, $h1_line_height_max);
+    font-weight: 300;
+
+    @include max-width($desktop_medium) {
+        font-weight: 100;
+    }
+}
+
+.h2 {
+    @include fluid-text($min_device_width, $max_device_width, $h2_font_size_min, $h2_font_size_max, $h2_line_height_min, $h2_line_height_max);
+    font-weight: 300;
+
+    @include max-width($desktop_medium) {
+        font-weight: 100;
+    }
+}
+
+.h3 {
+    @include fluid-text($min_device_width, $max_device_width, $h3_font_size_min, $h3_font_size_max, $h3_line_height_min, $h3_line_height_max);
+    font-weight: 500;
+}
+
+.subheading {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    color: rgba($main_color, 0.9);
+
+    @include max-width($desktop_medium) {
+        // font-size: 16px;
+        // line-height: 28px;
+    }
+}
+
+.emphasis_text {
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 100;
+
+    @include max-width($phone) {
+        // font-size: 20px;
+        // line-height: 30px;
+    }
+}
+
+strong {
+    font-weight: 600;
+}

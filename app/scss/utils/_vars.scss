@@ -1,0 +1,60 @@
+$main_font: 'Manrope';
+$fallback_fonts: 'Arial', 'Helvetica CY', 'Nimbus Sans L';
+
+// ui colors
+$main_color: #161C23;
+$section_background_color: #F5F5F5;
+
+// buttons
+$button_font_size: 20px;
+$button_line_height: 28px;
+$small_button_font_size: 18px;
+$small_button_line_height: 30px;
+$button_color: rgba(#054C63, 0.9);
+
+// forms
+$input_error: #F63A3A;
+
+// devices
+$desktop: 1920px;
+$desktop_large: 1600px;
+$desktop_medium: 1440px;
+$tablet_wide: 1024px;
+$tablet: 768px;
+$phone: 500px;
+$phone_small: 375px;
+$phone_tiny: 320px;
+
+// min values for mixin
+$min_device_width: $phone_tiny;
+$max_device_width: $desktop;
+
+// headings
+// will change
+$h1_font_size_min: 25px;
+$h1_font_size_max: 45px;
+// will change
+$h1_line_height_min: 40px;
+$h1_line_height_max: 60px;
+
+// will change
+$h2_font_size_min: 28px;
+$h2_font_size_max: 25px;
+// will change
+$h2_line_height_min: 42px;
+$h2_line_height_max: 35px;
+
+// will change
+$h3_font_size_min: 28px;
+$h3_font_size_max: 22px;
+// will change
+$h3_line_height_min: 42px;
+$h3_line_height_max: 32px;
+
+// text
+// will change
+$text_font_size_min: 16px;
+$text_font_size_max: 20px;
+// will change
+$text_line_height_min: 30px;
+$text_line_height_max: 37px;

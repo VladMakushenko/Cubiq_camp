@@ -1,0 +1,49 @@
+// .page_wrap {
+//     display: flex;
+//     flex-direction: column;
+//     min-height: 100vh;
+//     width: 100%;
+// }
+
+// .page_content {
+//     flex: 1;
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+// }
+
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+
+    @include max-width($desktop) {
+        // padding-left: 120px;
+        // margin-left: 120px;
+
+        &--offset_left {
+            margin-right: 0;
+        }
+    }
+}
+
+
+.flex_container {
+    display: flex;
+    
+    &--aligned {
+        align-items: center;
+    }
+
+    @include max-width($tablet_wide) {
+        flex-direction: column-reverse;
+        
+        &--aligned {
+            align-items: flex-start;
+        }
+    }
+}
+

@@ -1,0 +1,71 @@
+html {
+    font-family: $main_font, $fallback_fonts, sans-serif;
+    @include fluid-text($min_device_width, $max_device_width, $text_font_size_min, $text_font_size_max, $text_line_height_min, $text_line_height_max);
+    letter-spacing: 0.03em;
+    font-weight: 300;
+    font-style: normal;
+    -webkit-text-size-adjust: 100%;
+    // scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    background-color: #FFFFFF;
+    color: $main_color;
+    animation: fadeIn 300ms ease;
+}
+
+section,
+article,
+aside {
+    position: relative;
+}
+
+[data-theme="gray"] {
+    background-color: $section_background_color;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+::selection {
+    color: #FFFFFF;
+    background-color: $main_color;
+}
+
+// basic scroll
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+    overflow: scroll;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $main_color;
+    min-width: 10px;
+    min-height: 10px;
+}
+
+*::-webkit-scrollbar-thumb:horizontal {
+    border-radius: 0 5px 5px 0;
+}
+
+*::-webkit-scrollbar-thumb:vertical {
+    border-radius: 0 0 5px 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba($main_color, 0.95);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: rgba($main_color, 0.90);
+}
