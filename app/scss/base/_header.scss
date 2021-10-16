@@ -1,11 +1,12 @@
-.top_menu {
+.header {
     display: flex;
     align-items: center;
     margin-top: 5.5vh;
-    margin-right: 6.25vw;
+    margin-right: 5.25vw;
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 99;
 
     &__logo {
         display: none;
@@ -45,6 +46,7 @@
         &__item {
             width: 2.35vw;
             height: 2.35vw;
+            max-width: 45px;
         }
 
         &__item:not(:last-of-type) {
@@ -70,7 +72,8 @@
     }
 
     @include max-width($tablet) {
-        position: static;
+        // position: static;
+        width: 100%;
         margin: 0;
         justify-content: space-between;
         padding: 6.5vw 6.5vw 0;
@@ -78,6 +81,10 @@
         &__logo,
         &__lines {
             display: block;
+        }
+
+        &__phone {
+            margin-right: 0;
         }
 
         .socials_list {

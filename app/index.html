@@ -3,183 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=320, initial-scale=1.0">
     <title>cubiq.camp</title>
     <meta name="description" content="Сборно-разборные здания: проектирование и производство">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="../dist/css/style.min.css">
     <link rel="stylesheet" href="../dist/css/pages/index.min.css">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css"> -->
 </head>
+
 <body>
+
+    <!-- @@include('./components/_header.html') -->
+
+    <!-- temporarily -->
+    <header class="header">
+        <a href="/" class="header__logo">
+            <img src="./img/cubiq_camp.svg" alt="cubiq.camp">
+        </a>
+    
+        <div class="header__lines">
+            <span></span>
+            <span></span>
+        </div>
+    
+        <a href="tel:+7800776235" class="header__phone">8 800 77 62 35</a>
+    
+        <nav class="socials_list">
+            <a href="/" class="socials_list__item">
+                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45ZM11.4656 13.4473H33.6371C34.9476 13.4473 36.0014 14.5141 36.0014 15.8115V29.9971C36.0014 31.309 34.9324 32.3613 33.6371 32.3613H11.4656C10.1671 32.3613 9.10135 31.3045 9.10135 29.9971V15.8115C9.10135 14.5118 10.1593 13.4473 11.4656 13.4473ZM24.2231 24.0584L33.306 15.0234H11.7967L20.8781 24.057C21.3261 24.505 21.9198 24.7509 22.5513 24.7509C23.1829 24.7509 23.7766 24.505 24.2231 24.0584ZM10.6775 16.1333V29.6763L17.4886 22.9085L10.6775 16.1333ZM18.6061 24.0201L11.7977 30.7852H33.305L26.4966 24.0201L25.3362 25.1744C24.5934 25.9172 23.6039 26.3271 22.5513 26.3271C21.4988 26.3271 20.5093 25.9172 19.765 25.1729L18.6061 24.0201ZM27.6141 22.9085L34.4252 29.6763V16.1333L27.6141 22.9085Z" fill="#161C23"/>
+                </svg>
+            </a>
+            <a href="/" class="socials_list__item">
+                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45ZM22.5515 10.125C25.8479 10.1264 28.9421 11.4036 31.2687 13.7218C33.5955 16.0398 34.8761 19.121 34.8747 22.3982C34.8721 29.1603 29.3434 34.6623 22.5516 34.6623H22.5465C20.4841 34.6617 18.4576 34.1467 16.6575 33.1695L10.1247 34.875L11.873 28.5198C10.7946 26.6599 10.2272 24.5499 10.2281 22.3884C10.2308 15.6265 15.759 10.125 22.5515 10.125ZM22.5472 32.5911H22.5515C28.1971 32.5911 32.7917 28.0181 32.7942 22.3974C32.7951 19.6736 31.7307 17.1125 29.797 15.1857C27.8632 13.2589 25.2914 12.1973 22.5556 12.1964C16.9059 12.1964 12.3109 16.7689 12.3088 22.3891C12.3079 24.3152 12.8493 26.191 13.8747 27.8141L14.1183 28.1997L13.0835 31.9613L16.9602 30.9492L17.3341 31.1702C18.9069 32.0988 20.7094 32.5903 22.5472 32.5911ZM26.0657 23.9596C26.348 24.062 27.862 24.8031 28.1698 24.9566C28.2302 24.9867 28.2867 25.0139 28.339 25.039C28.5533 25.1421 28.6981 25.2117 28.7598 25.3144C28.8369 25.4424 28.8369 26.0559 28.5804 26.7717C28.3235 27.4875 27.0936 28.1408 26.5019 28.2289C25.9713 28.3077 25.3002 28.3407 24.5625 28.1074C24.1152 27.9662 23.5418 27.7778 22.8071 27.4618C19.9206 26.2215 17.9698 23.4371 17.601 22.9108C17.5752 22.8739 17.5571 22.8482 17.547 22.8348L17.5443 22.8311C17.3804 22.6134 16.2898 21.1644 16.2898 19.6647C16.2898 18.2532 16.9863 17.5135 17.3069 17.1729C17.3289 17.1495 17.3492 17.128 17.3673 17.1083C17.6496 16.8013 17.9833 16.7247 18.1885 16.7247C18.3939 16.7247 18.5992 16.7266 18.7786 16.7355C18.8007 16.7366 18.8237 16.7364 18.8474 16.7363C19.027 16.7352 19.2506 16.7339 19.4715 17.2615C19.5559 17.4633 19.6791 17.7618 19.8092 18.0771C20.0748 18.7207 20.3691 19.434 20.4207 19.5369C20.4978 19.6902 20.5492 19.8693 20.4465 20.0738C20.3439 20.2782 20.0101 20.7101 19.6768 21.122C19.6625 21.1396 19.6478 21.157 19.6331 21.1744C19.5069 21.3236 19.381 21.4725 19.5417 21.7474C19.7214 22.0541 20.3393 23.0576 21.2546 23.8701C22.2389 24.7438 23.0943 25.1131 23.5277 25.3001C23.6122 25.3366 23.6806 25.3662 23.7309 25.3912C24.0389 25.5447 24.2183 25.519 24.398 25.3144C24.5777 25.1101 25.1677 24.4197 25.3731 24.113C25.5781 23.8064 25.7837 23.8573 26.0657 23.9596Z" fill="#161C23"/>
+                </svg>
+            </a>
+            <a href="/" class="socials_list__item">
+                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0ZM17.553 10.5725C18.833 10.5142 19.242 10.5 22.501 10.5H22.4973C25.7573 10.5 26.1648 10.5142 27.4448 10.5725C28.7223 10.631 29.5949 10.8332 30.3599 11.13C31.1499 11.4362 31.8174 11.8462 32.4849 12.5137C33.1524 13.1808 33.5624 13.8503 33.8699 14.6395C34.1649 15.4025 34.3674 16.2745 34.4274 17.5521C34.4849 18.8321 34.4999 19.2411 34.4999 22.5001C34.4999 25.7591 34.4849 26.1671 34.4274 27.4472C34.3674 28.7242 34.1649 29.5964 33.8699 30.3597C33.5624 31.1487 33.1524 31.8182 32.4849 32.4852C31.8181 33.1527 31.1496 33.5637 30.3606 33.8702C29.5971 34.167 28.7241 34.3692 27.4466 34.4277C26.1666 34.486 25.7588 34.5002 22.4995 34.5002C19.2407 34.5002 18.832 34.486 17.552 34.4277C16.2747 34.3692 15.4025 34.167 14.639 33.8702C13.8502 33.5637 13.1807 33.1527 12.5139 32.4852C11.8467 31.8182 11.4367 31.1487 11.1299 30.3594C10.8334 29.5964 10.6312 28.7244 10.5724 27.4469C10.5144 26.1669 10.4999 25.7591 10.4999 22.5001C10.4999 19.2411 10.5149 18.8318 10.5722 17.5518C10.6297 16.2748 10.8322 15.4025 11.1297 14.6393C11.4372 13.8503 11.8472 13.1808 12.5147 12.5137C13.1817 11.8465 13.8512 11.4365 14.6405 11.13C15.4035 10.8332 16.2755 10.631 17.553 10.5725Z" fill="#161C23"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4261 12.6627C21.6352 12.6623 21.86 12.6624 22.1027 12.6626L22.5026 12.6627C25.7067 12.6627 26.0864 12.6742 27.3517 12.7317C28.5217 12.7852 29.1567 12.9807 29.5797 13.1449C30.1397 13.3624 30.539 13.6224 30.9587 14.0424C31.3787 14.4624 31.6387 14.8624 31.8567 15.4224C32.021 15.845 32.2167 16.48 32.27 17.65C32.3275 18.915 32.34 19.295 32.34 22.4975C32.34 25.7001 32.3275 26.0801 32.27 27.3451C32.2165 28.5151 32.021 29.1501 31.8567 29.5726C31.6392 30.1326 31.3787 30.5314 30.9587 30.9511C30.5387 31.3711 30.14 31.6311 29.5797 31.8486C29.1572 32.0136 28.5217 32.2086 27.3517 32.2621C26.0867 32.3196 25.7067 32.3321 22.5026 32.3321C19.2984 32.3321 18.9186 32.3196 17.6536 32.2621C16.4836 32.2081 15.8486 32.0126 15.4253 31.8484C14.8653 31.6309 14.4653 31.3709 14.0453 30.9509C13.6253 30.5309 13.3653 30.1319 13.1473 29.5716C12.983 29.1491 12.7873 28.5141 12.734 27.3441C12.6765 26.0791 12.665 25.6991 12.665 22.4945C12.665 19.29 12.6765 18.912 12.734 17.647C12.7875 16.477 12.983 15.842 13.1473 15.4189C13.3648 14.8589 13.6253 14.4589 14.0453 14.0389C14.4653 13.6189 14.8653 13.3589 15.4253 13.1409C15.8483 12.9759 16.4836 12.7809 17.6536 12.7272C18.7606 12.6772 19.1896 12.6622 21.4261 12.6597V12.6627ZM28.9083 14.6552C28.1133 14.6552 27.4683 15.2995 27.4683 16.0947C27.4683 16.8897 28.1133 17.5347 28.9083 17.5347C29.7033 17.5347 30.3483 16.8897 30.3483 16.0947C30.3483 15.2997 29.7033 14.6547 28.9083 14.6547V14.6552ZM16.34 22.5002C16.34 19.097 19.0991 16.3378 22.5023 16.3377C25.9056 16.3377 28.6641 19.097 28.6641 22.5002C28.6641 25.9035 25.9058 28.6616 22.5025 28.6616C19.0992 28.6616 16.34 25.9035 16.34 22.5002Z" fill="#161C23"/>
+                    <path d="M22.501 18.5C24.71 18.5 26.5011 20.2908 26.5011 22.5C26.5011 24.7091 24.71 26.5001 22.501 26.5001C20.2917 26.5001 18.501 24.7091 18.501 22.5C18.501 20.2908 20.2917 18.5 22.501 18.5Z" fill="#161C23"/>
+                </svg>                        
+            </a>
+        </nav>
+    </header>
+
+    <!-- @@include('./components/_page_navigator.html') -->
+    
+    <!-- temporarily -->
+    <div class="page_navigator">
+        <div class="page_navigator__content">
+            <span class="page_navigator__name">Главная</span>
+            <span class="page_navigator__line"></span>
+            <img class="page_navigator__logo" src="./img/cubiq_camp.svg" alt="cubiq.camp">
+        </div>
+    </div>
+
     <main class="main">
-        <section class="intro_section">
-            <!-- @@include('./components/_header.html') -->
-            <!-- @@include('./components/_page_navigator.html') -->
-
-            <!-- temporarily -->
-            <div class="top_menu">
-                <a href="/" class="top_menu__logo">
-                    <img src="./img/cubiq_camp.svg" alt="cubiq.camp">
-                </a>
-            
-                <div class="top_menu__lines">
-                    <span></span>
-                    <span></span>
+        <section class="intro_section" data-theme="gray">
+            <div class="wrapper">
+                <div class="intro_content">
+                    <h1 class="h1 h1--uppercase">Инфраструктура<br> для кемпинга</h1>
                 </div>
-            
-                <a href="tel:+7800776235" class="top_menu__phone">8 800 77 62 35</a>
-            
-                <nav class="socials_list">
-                    <a href="/" class="socials_list__item">
-                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45ZM11.4656 13.4473H33.6371C34.9476 13.4473 36.0014 14.5141 36.0014 15.8115V29.9971C36.0014 31.309 34.9324 32.3613 33.6371 32.3613H11.4656C10.1671 32.3613 9.10135 31.3045 9.10135 29.9971V15.8115C9.10135 14.5118 10.1593 13.4473 11.4656 13.4473ZM24.2231 24.0584L33.306 15.0234H11.7967L20.8781 24.057C21.3261 24.505 21.9198 24.7509 22.5513 24.7509C23.1829 24.7509 23.7766 24.505 24.2231 24.0584ZM10.6775 16.1333V29.6763L17.4886 22.9085L10.6775 16.1333ZM18.6061 24.0201L11.7977 30.7852H33.305L26.4966 24.0201L25.3362 25.1744C24.5934 25.9172 23.6039 26.3271 22.5513 26.3271C21.4988 26.3271 20.5093 25.9172 19.765 25.1729L18.6061 24.0201ZM27.6141 22.9085L34.4252 29.6763V16.1333L27.6141 22.9085Z" fill="#161C23"/>
-                        </svg>
-                    </a>
-                    <a href="/" class="socials_list__item">
-                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45ZM22.5515 10.125C25.8479 10.1264 28.9421 11.4036 31.2687 13.7218C33.5955 16.0398 34.8761 19.121 34.8747 22.3982C34.8721 29.1603 29.3434 34.6623 22.5516 34.6623H22.5465C20.4841 34.6617 18.4576 34.1467 16.6575 33.1695L10.1247 34.875L11.873 28.5198C10.7946 26.6599 10.2272 24.5499 10.2281 22.3884C10.2308 15.6265 15.759 10.125 22.5515 10.125ZM22.5472 32.5911H22.5515C28.1971 32.5911 32.7917 28.0181 32.7942 22.3974C32.7951 19.6736 31.7307 17.1125 29.797 15.1857C27.8632 13.2589 25.2914 12.1973 22.5556 12.1964C16.9059 12.1964 12.3109 16.7689 12.3088 22.3891C12.3079 24.3152 12.8493 26.191 13.8747 27.8141L14.1183 28.1997L13.0835 31.9613L16.9602 30.9492L17.3341 31.1702C18.9069 32.0988 20.7094 32.5903 22.5472 32.5911ZM26.0657 23.9596C26.348 24.062 27.862 24.8031 28.1698 24.9566C28.2302 24.9867 28.2867 25.0139 28.339 25.039C28.5533 25.1421 28.6981 25.2117 28.7598 25.3144C28.8369 25.4424 28.8369 26.0559 28.5804 26.7717C28.3235 27.4875 27.0936 28.1408 26.5019 28.2289C25.9713 28.3077 25.3002 28.3407 24.5625 28.1074C24.1152 27.9662 23.5418 27.7778 22.8071 27.4618C19.9206 26.2215 17.9698 23.4371 17.601 22.9108C17.5752 22.8739 17.5571 22.8482 17.547 22.8348L17.5443 22.8311C17.3804 22.6134 16.2898 21.1644 16.2898 19.6647C16.2898 18.2532 16.9863 17.5135 17.3069 17.1729C17.3289 17.1495 17.3492 17.128 17.3673 17.1083C17.6496 16.8013 17.9833 16.7247 18.1885 16.7247C18.3939 16.7247 18.5992 16.7266 18.7786 16.7355C18.8007 16.7366 18.8237 16.7364 18.8474 16.7363C19.027 16.7352 19.2506 16.7339 19.4715 17.2615C19.5559 17.4633 19.6791 17.7618 19.8092 18.0771C20.0748 18.7207 20.3691 19.434 20.4207 19.5369C20.4978 19.6902 20.5492 19.8693 20.4465 20.0738C20.3439 20.2782 20.0101 20.7101 19.6768 21.122C19.6625 21.1396 19.6478 21.157 19.6331 21.1744C19.5069 21.3236 19.381 21.4725 19.5417 21.7474C19.7214 22.0541 20.3393 23.0576 21.2546 23.8701C22.2389 24.7438 23.0943 25.1131 23.5277 25.3001C23.6122 25.3366 23.6806 25.3662 23.7309 25.3912C24.0389 25.5447 24.2183 25.519 24.398 25.3144C24.5777 25.1101 25.1677 24.4197 25.3731 24.113C25.5781 23.8064 25.7837 23.8573 26.0657 23.9596Z" fill="#161C23"/>
-                        </svg>
-                    </a>
-                    <a href="/" class="socials_list__item">
-                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0ZM17.553 10.5725C18.833 10.5142 19.242 10.5 22.501 10.5H22.4973C25.7573 10.5 26.1648 10.5142 27.4448 10.5725C28.7223 10.631 29.5949 10.8332 30.3599 11.13C31.1499 11.4362 31.8174 11.8462 32.4849 12.5137C33.1524 13.1808 33.5624 13.8503 33.8699 14.6395C34.1649 15.4025 34.3674 16.2745 34.4274 17.5521C34.4849 18.8321 34.4999 19.2411 34.4999 22.5001C34.4999 25.7591 34.4849 26.1671 34.4274 27.4472C34.3674 28.7242 34.1649 29.5964 33.8699 30.3597C33.5624 31.1487 33.1524 31.8182 32.4849 32.4852C31.8181 33.1527 31.1496 33.5637 30.3606 33.8702C29.5971 34.167 28.7241 34.3692 27.4466 34.4277C26.1666 34.486 25.7588 34.5002 22.4995 34.5002C19.2407 34.5002 18.832 34.486 17.552 34.4277C16.2747 34.3692 15.4025 34.167 14.639 33.8702C13.8502 33.5637 13.1807 33.1527 12.5139 32.4852C11.8467 31.8182 11.4367 31.1487 11.1299 30.3594C10.8334 29.5964 10.6312 28.7244 10.5724 27.4469C10.5144 26.1669 10.4999 25.7591 10.4999 22.5001C10.4999 19.2411 10.5149 18.8318 10.5722 17.5518C10.6297 16.2748 10.8322 15.4025 11.1297 14.6393C11.4372 13.8503 11.8472 13.1808 12.5147 12.5137C13.1817 11.8465 13.8512 11.4365 14.6405 11.13C15.4035 10.8332 16.2755 10.631 17.553 10.5725Z" fill="#161C23"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4261 12.6627C21.6352 12.6623 21.86 12.6624 22.1027 12.6626L22.5026 12.6627C25.7067 12.6627 26.0864 12.6742 27.3517 12.7317C28.5217 12.7852 29.1567 12.9807 29.5797 13.1449C30.1397 13.3624 30.539 13.6224 30.9587 14.0424C31.3787 14.4624 31.6387 14.8624 31.8567 15.4224C32.021 15.845 32.2167 16.48 32.27 17.65C32.3275 18.915 32.34 19.295 32.34 22.4975C32.34 25.7001 32.3275 26.0801 32.27 27.3451C32.2165 28.5151 32.021 29.1501 31.8567 29.5726C31.6392 30.1326 31.3787 30.5314 30.9587 30.9511C30.5387 31.3711 30.14 31.6311 29.5797 31.8486C29.1572 32.0136 28.5217 32.2086 27.3517 32.2621C26.0867 32.3196 25.7067 32.3321 22.5026 32.3321C19.2984 32.3321 18.9186 32.3196 17.6536 32.2621C16.4836 32.2081 15.8486 32.0126 15.4253 31.8484C14.8653 31.6309 14.4653 31.3709 14.0453 30.9509C13.6253 30.5309 13.3653 30.1319 13.1473 29.5716C12.983 29.1491 12.7873 28.5141 12.734 27.3441C12.6765 26.0791 12.665 25.6991 12.665 22.4945C12.665 19.29 12.6765 18.912 12.734 17.647C12.7875 16.477 12.983 15.842 13.1473 15.4189C13.3648 14.8589 13.6253 14.4589 14.0453 14.0389C14.4653 13.6189 14.8653 13.3589 15.4253 13.1409C15.8483 12.9759 16.4836 12.7809 17.6536 12.7272C18.7606 12.6772 19.1896 12.6622 21.4261 12.6597V12.6627ZM28.9083 14.6552C28.1133 14.6552 27.4683 15.2995 27.4683 16.0947C27.4683 16.8897 28.1133 17.5347 28.9083 17.5347C29.7033 17.5347 30.3483 16.8897 30.3483 16.0947C30.3483 15.2997 29.7033 14.6547 28.9083 14.6547V14.6552ZM16.34 22.5002C16.34 19.097 19.0991 16.3378 22.5023 16.3377C25.9056 16.3377 28.6641 19.097 28.6641 22.5002C28.6641 25.9035 25.9058 28.6616 22.5025 28.6616C19.0992 28.6616 16.34 25.9035 16.34 22.5002Z" fill="#161C23"/>
-                            <path d="M22.501 18.5C24.71 18.5 26.5011 20.2908 26.5011 22.5C26.5011 24.7091 24.71 26.5001 22.501 26.5001C20.2917 26.5001 18.501 24.7091 18.501 22.5C18.501 20.2908 20.2917 18.5 22.501 18.5Z" fill="#161C23"/>
-                        </svg>                        
-                    </a>
-                </nav>
-            </div>
-            
-            <!-- temporarily -->
-            <div class="page_navigator">
-                <div class="page_navigator__content">
-                    <span class="page_navigator__name">Главная</span>
-                    <span class="page_navigator__line"></span>
-                    <img class="page_navigator__logo" src="./img/cubiq_camp.svg" alt="cubiq.camp">
-                </div>
-            </div>
-
-            <div class="intro_content">
-                <h1 class="h1">Инфраструктура<br> для кемпинга</h1>
             </div>
         </section>
 
-        <section class="all_season_hotel" data-theme="gray">
-            <div class="wrapper wrapper--offset_left">
-                <article class="flex_container flex_container--aligned">
-                    <div class="flex_container__item">
+        <article class="all_season_hotel" data-theme="gray">
+            <div class="wrapper">
+                <div class="flex_container flex_container--centered">
+                    <div class="flex_container__item flex_container__item--text">
                         <h2 class="emphasis_text">Всесезонный отель в&nbsp;любой точке мира</h2>
 
-                        <div class="list">
-                            <div class="list__item">
+                        <div class="features_list">
+                            <div class="features_list__item">
                                 <h3 class="subheading">Размещайте там, где нельзя строить</h3>
                                 <p>на арендованных территориях, в&nbsp;заповедных зонах: в&nbsp;лесу, на пляже, склонах гор</p>   
                             </div>
-                            <div class="list__item">
+                            <div class="features_list__item">
                                 <h3 class="subheading">Удивляйте комфортом</h3>
                                 <p>за него отвечают инновации</p>
                             </div>
-                            <div class="list__item">
+                            <div class="features_list__item">
                                 <h3 class="subheading">Быстрый запуск бизнеса</h3>
                                 <p>производство занимает несколько недель</p>
                             </div>
                         </div>
                     </div>
-
-                    <img class="flex_container__item" src="./img/main_page/all_season_hotel.jpg" alt="Всесезонный отель в любой точке мира">
-                </article>
+                    
+                    <picture class="flex_container__item flex_container__item--picture">
+                        <source media="(max-width: 500px)" srcset="./img/main_page/all_season_hotel--phone.jpg">
+                        <source media="(max-width: 768px)" srcset="./img/main_page/all_season_hotel--tablet.jpg">
+                        <img src="./img/main_page/all_season_hotel.jpg" alt="Всесезонный отель в любой точке мира">
+                    </picture>
+                </div>
             </div>
-        </section>
+        </article>
 
         <article class="hi_tech_modules">
-            <div class="wrapper wrapper--offset_left">
-                <h2>
+            <div class="wrapper">
+                <h2 class="h2--uppercase">
                     <span>31</span>
                     <span>Модуль<br> в стиле хай-тек</span>
                 </h2>
 
                 <div class="modules_list">
                     <div class="modules_list__item">
-                        <h3 class="h3">Номерной фонд</h3>
+                        <h3 class="h3">Номерной<br> фонд</h3>
                         <ul>
-                            <li class="is_disabled">lifePod 16 м2</li>
-                            <li>lifePod 18 м2</li>
-                            <li>lifePod 24 м2</li>
-                            <li>lifePod 30 м2</li>
+                            <li class="is_disabled">
+                                <a href="/">lifePod 16 м2</a>
+                            </li>
+                            <li>
+                                <a href="/">lifePod 18 м2</a>
+                            </li>
+                            <li>
+                                <a href="/">lifePod 24 м2</a>
+                            </li>
+                            <li>
+                                <a href="/">lifePod 30 м2</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="modules_list__item">
-                        <h3 class="h3">Питание и мероприятия</h3>
+                        <h3 class="h3">Питание<br> и&nbsp;мероприятия</h3>
                         <ul>
-                            <li class="is_disabled">Кухня</li>
-                            <li>Ресторан</li>
-                            <li class="is_disabled">Банкетный зал</li>
-                            <li class="is_disabled">Конференц-холл</li>
-                            <li>Lounge-павильон</li>
+                            <li class="is_disabled">
+                                <a href="/">Кухня</a>
+                            </li>
+                            <li>
+                                <a href="/">Ресторан</a>
+                            </li>
+                            <li class="is_disabled">
+                                <a href="/">Банкетный зал</a>
+                            </li>
+                            <li class="is_disabled">
+                                <a href="/">Конференц-холл</a>
+                            </li>
+                            <li>
+                                <a href="/">Lounge-павильон</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="modules_list__item">
-                        <h3 class="h3">Cервис и безопасность</h3>
+                        <h3 class="h3">Cервис<br> и&nbsp;безопасность</h3>
                         <ul>
-                            <li>Рецепция</li>
-                            <li>Мини-офис</li>
-                            <li class="is_disabled">Кабинет врача</li>
-                            <li class="is_disabled">Пост охраны</li>
-                            <li class="is_disabled">Прачечная</li>
+                            <li>
+                                <a href="/">Рецепция</a>
+                            </li>
+                            <li>
+                                <a href="/">Мини-офис</a>
+                            </li>
+                            <li class="is_disabled">
+                                <a href="/">Кабинет врача</a>
+                            </li>
+                            <li class="is_disabled">
+                                <a href="/">Пост охраны</a>
+                            </li>
+                            <li class="is_disabled">
+                                <a href="/">Прачечная</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="modules_list__item">
-                        <h3 class="h3">Отдых и развлечения</h3>
+                        <h3 class="h3">Отдых<br> и&nbsp;развлечения</h3>
                         <ul>
-                            <li class="is_disabled">Сауна</li>
-                            <li class="is_disabled">Салон массажа</li>
-                            <li class="is_disabled">Игровой павильон</li>
-                            <li class="is_disabled">Склад спортинвентаря</li>
-                            <li>Кинозал</li>
+                            <li class="is_disabled">
+                                <a href="/">Сауна</a>
+                            </li>
+                            <li class="is_disabled">
+                                <a href="/">Салон массажа</a>
+                            </li>
+                            <li class="is_disabled">
+                                <a href="/">Игровой павильон</a>
+                            </li>
+                            <li class="is_disabled">
+                                <a href="/">Склад спортинвентаря</a>
+                            </li>
+                            <li>
+                                <a href="/">Кинозал</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="modules_list__item">
-                        <h3 class="h3">Открытые площадки</h3>
+                        <h3 class="h3">Открытые<br> площадки</h3>
                         <ul>
-                            <li class="is_disabled">Lounge-зона</li>
-                            <li class="is_disabled">Барбекю</li>
-                            <li>Беседка</li>
-                            <li>Джакузи</li>
-                            <li>Бассейн</li>
+                            <li class="is_disabled">
+                                <a href="/">Lounge-зона</a>
+                            </li>
+                            <li class="is_disabled">
+                                <a href="/">Барбекю</a>
+                            </li>
+                            <li>
+                                <a href="/">Беседка</a>
+                            </li>
+                            <li>
+                                <a href="/">Джакузи</a>
+                            </li>
+                            <li>
+                                <a href="/">Бассейн</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="modules_list__item">
-                        <h3 class="h3">Вспомогательные объекты</h3>
+                        <h3 class="h3">Вспомогательные<br> объекты</h3>
                         <ul>
-                            <li>Staff-хостел</li>
-                            <li>Кладовая</li>
-                            <li class="is_disabled">Гараж</li>
-                            <li class="is_disabled">Склад ТБО</li>
+                            <li>
+                                <a href="/">Staff-хостел</a>
+                            </li>
+                            <li>
+                                <a href="/">Кладовая</a>
+                            </li>
+                            <li class="is_disabled">
+                                <a href="/">Гараж</a>
+                            </li>
+                            <li class="is_disabled">
+                                <a href="/">Склад ТБО</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="modules_list__item">
-                        <h3 class="h3">Автоматическое жизнеобеспечение</h3>
+                        <h3 class="h3">Автоматическое<br> жизнеобеспечение</h3>
                         <ul>
-                            <li class="is_disabled">Электростанция</li>
-                            <li>Станция водоснабжения</li>
-                            <li class="is_disabled">Коллектор сточных вод</li>
+                            <li class="is_disabled">
+                                <a href="/">Электростанция</a>
+                            </li>
+                            <li>
+                                <a href="/">Станция водоснабжения</a>
+                            </li>
+                            <li class="is_disabled">
+                                <a href="/">Коллектор сточных вод</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="modules_list__item">
-                        <a href="/" class="link link--go_to">Перейти в каталог</a>
+                        <h3 class="h3">
+                            <a href="/" class="link link--go_to">Перейти в&nbsp;каталог</a>
+                        </h3>
                     </div>
                 </div>
+
+                <button class="button button--centered">Показать все</button>
             </div>
         </article>
 
         <article class="new_generation_options" data-theme="gray">
             <div class="options_header">
-                <h2>Опции нового<br> поколения</h2>
+                <h2 class="h2--uppercase">Опции нового<br> поколения</h2>
             </div>
 
             <div class="wrapper">
@@ -228,61 +301,88 @@
 
         <article class="formats_of_complexes" data-theme="gray">
             <div class="wrapper">
-                <h2 class="h2">Форматы комплексов для отдыха</h2>
+                <h2 class="h2 h2--uppercase">Форматы комплексов для отдыха</h2>
 
                 <div class="lineup_swiper swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" data-slide-index="0">
-                            <div class="slide_image"></div>
-                            <div class="slide_description">
-                                <p class="slide_name">Отель выходного дня</p>
-                                 <span class="slide_line"></span>
-                                 <p class="slide_meaning">инфраструктура для кемпингов и отелей</p>
-                            </div>
+                        <div class="swiper-slide swiper-slide--is_active" data-slide-index="0">
+                            <figure>
+                                <img class="swiper-slide__picture" src="./img/formats/slider/weekend_hotel.jpg" alt="Отель выходного дня" title="Отель выходного дня">
+                                <figcaption class="swiper-slide__name">
+                                    <h3 class="subheading">Отель выходного дня</h3>
+                                    <span>Гостеприимная база для спокойного отдыха в&nbsp;красивом месте недалеко от города</span>
+                                </figcaption>
+                            </figure>
                         </div>
 
                         <div class="swiper-slide" data-slide-index="1">
-                            <div class="slide_image"></div>
-                            <div class="slide_description">
-                                <p class="slide_name">
-                                    <span class="semibold">сubiq.</span>house
-                                </p>
-                                <span class="slide_line"></span>
-                                <p class="slide_meaning">комплекс для обустройства загородного участка</p>
-                            </div>
+                            <figure>
+                                <img class="swiper-slide__picture" src="./img/formats/slider/camping.jpg" alt="Охотничий или рыболовный кемпинг" title="Охотничий или рыболовный кемпинг">
+                                <figcaption class="swiper-slide__name">
+                                    <h3 class="subheading">Охотничий или рыболовный кемпинг</h3>
+                                    <span>Благоустроенный кемпинг для любителей рыбной ловли или охоты</span>
+                                </figcaption>
+                            </figure>
                         </div>
 
                         <div class="swiper-slide" data-slide-index="2">
-                            <div class="slide_image"></div>
-                            <div class="slide_description">
-                                <p class="slide_name">
-                                    <span class="semibold">chalet</span>
-                                </p>
-                                <span class="slide_line"></span>
-                                <p class="slide_meaning">рестораны и банкетные залы</p>
-                            </div>
+                            <figure>
+                                <img class="swiper-slide__picture" src="./img/formats/slider/relax_complex.jpg" alt="Пляжный Relax комплекс" title="Пляжный Relax комплекс">
+                                <figcaption class="swiper-slide__name">
+                                    <h3 class="subheading">Пляжный Relax комплекс</h3>
+                                    <span>SPA-комплекс для длительного отдыха на берегу водоема – озера, моря, океана</span>
+                                </figcaption>
+                            </figure>
                         </div>
 
                         <div class="swiper-slide" data-slide-index="3">
-                            <div class="slide_image"></div>
-                            <div class="slide_description">
-                                <p class="slide_name">
-                                    <span class="semibold">skyline.</span>luxury
-                                </p>
-                                <span class="slide_line"></span>
-                                <p class="slide_meaning">линейка для видовых локаций</p>
-                            </div>
+                            <figure>
+                                <img class="swiper-slide__picture" src="./img/formats/slider/ski_resort.jpg" alt="Горнолыжная деревня" title="Горнолыжная деревня">
+                                <figcaption class="swiper-slide__name">
+                                    <h3 class="subheading">Горнолыжная деревня</h3>
+                                    <span>Курорт для любителей гор, зимнего туризма или активного отдыха – альпинизма, сноуборда, горных лыж</span>
+                                </figcaption>
+                            </figure>
                         </div>
 
                         <div class="swiper-slide" data-slide-index="4">
-                            <div class="slide_image"></div>
-                            <div class="slide_description">
-                                <p class="slide_name">
-                                    <span class="semibold">norca</span>
-                                </p>
-                                <span class="slide_line"></span>
-                                <p class="slide_meaning">модули для бесконтактных отелей</p>
-                            </div>
+                            <figure>
+                                <img class="swiper-slide__picture" src="./img/formats/slider/holiday_resort.jpg" alt="База активного отдыха" title="База активного отдыха">
+                                <figcaption class="swiper-slide__name">
+                                    <h3 class="subheading">База активного отдыха</h3>
+                                    <span>Комплекс в&nbsp;живописном месте для активного времяпрепровождения</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="swiper-slide" data-slide-index="5">
+                            <figure>
+                                <img class="swiper-slide__picture" src="./img/formats/slider/residence.jpg" alt="Резиденция для мероприятий" title="Резиденция для мероприятий">
+                                <figcaption class="swiper-slide__name">
+                                    <h3 class="subheading">Резиденция для мероприятий</h3>
+                                    <span>Отдых и организация мероприятий для частных или корпоративных клиентов: банкеты, свадьбы, семинары, конференции и&nbsp;другие бизнес-события</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="swiper-slide" data-slide-index="6">
+                            <figure>
+                                <img class="swiper-slide__picture" src="./img/formats/slider/luxury_hotel.jpg" alt="Luxury отель в видовой локации" title="Luxury отель в видовой локации">
+                                <figcaption class="swiper-slide__name">
+                                    <h3 class="subheading">Luxury отель в видовой локации</h3>
+                                    <span>Пятизвездочный комплекс для длительного отдыха в&nbsp;красивом месте</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="swiper-slide" data-slide-index="7">
+                            <figure>
+                                <img class="swiper-slide__picture" src="./img/formats/slider/boarding_house.jpg" alt="Санаторно-оздоровительный центр" title="Санаторно-оздоровительный центр">
+                                <figcaption class="swiper-slide__name">
+                                    <h3 class="subheading">Санаторно-оздоровительный центр</h3>
+                                    <span>Пансионат или курортно-восстановительный центр с&nbsp;оказанием медицинских и&nbsp;профилактических услуг</span>
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
 
@@ -292,7 +392,7 @@
             </div>
         </article>
 
-        <article class="payback_calculation" data-theme="gray">
+        <!-- <article class="payback_calculation" data-theme="gray">
             <div class="wrapper">
                 <h2 class="emphasis_text">Расчет окупаемости и рентабельности проектов с разными стартовыми капиталами</h2>
 
@@ -325,43 +425,21 @@
 
                 <a href="/" class="button">Узнать подробнее</a>
             </div>
-        </article>
+        </article> -->
 
         <section class="iterium_tech_news" data-theme="gray">
-            <div class="wrapper wrapper--offset_left">
-                <h2 class="h2">Новости</h2>
+            <div class="wrapper">
+                <h2 class="h2 h2--uppercase">Новости</h2>
 
-                <article class="news_swiper swiper">
+                <div class="news_swiper swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <article class="swiper-slide">
                             <div class="slide-content">
-                                <h2 class="h2">Новости</h2>
+                                <h2 class="h2 h2--uppercase">Новости</h2>
 
-                                <p class="emphasis_text">
+                                <h3 class="emphasis_text">
                                     <strong>ITERIUM.</strong>tech представляет <strong>skyline.</strong>luxury — бунгало для видовых локаций
-                                </p>
-    
-                                <p class="description">Новинка представлена двумя жилыми модулями - бунгало площадью 36 м2 и 64 м2. Для установки подходят пляжи, склоны до 20% или мелководье...</p>
-    
-                                <div class="datetime">
-                                    <time class="date">18.07.2021</time>
-                                    &nbsp;|&nbsp;
-                                    <span class="tag">#cubiq.house</span>
-                                </div>
-    
-                                <button class="button">показать все</button>
-                            </div>
-
-                            <div class="slide-image"></div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="slide-content">
-                                <h2 class="h2">Новости</h2>
-
-                                <p class="emphasis_text">
-                                    <strong>ITERIUM.</strong>tech представляет <strong>skyline.</strong>luxury — бунгало для видовых локаций
-                                </p>
+                                </h3>
     
                                 <p class="description">Новинка представлена двумя жилыми модулями — бунгало площадью 36 м2 и 64 м2. Для установки подходят пляжи, склоны до 20% или мелководье...</p>
     
@@ -374,15 +452,41 @@
                                 <button class="button">показать все</button>
                             </div>
 
-                            <div class="slide-image"></div>
-                        </div>
+                            <img class="swiper-lazy slide-image" data-src="./img/news_item.jpg" alt="Превью новости">
+                            
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </article>
+
+                        <article class="swiper-slide">
+                            <div class="slide-content">
+                                <h2 class="h2 h2--uppercase">Новости</h2>
+
+                                <h3 class="emphasis_text">
+                                    <strong>ITERIUM.</strong>tech представляет <strong>skyline.</strong>luxury — бунгало для видовых локаций
+                                </h3>
+    
+                                <p class="description">Новинка представлена двумя жилыми модулями — бунгало площадью 36 м2 и 64 м2. Для установки подходят пляжи, склоны до 20% или мелководье...</p>
+    
+                                <div class="datetime">
+                                    <time class="date">18.07.2021</time>
+                                    &nbsp;|&nbsp;
+                                    <span class="tag">#cubiq.house</span>
+                                </div>
+    
+                                <button class="button">показать все</button>
+                            </div>
+
+                            <img class="swiper-lazy slide-image" data-src="./img/news_item.jpg" alt="Превью новости">
+
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </article>
                     </div>
 
                     <div class="swiper-pagination"></div>
 
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-                </article>
+                </div>
 
                 <button class="button">показать все</button>
             </div>
@@ -392,27 +496,27 @@
             <div class="wrapper">
                 <h2 class="emphasis_text">Быстро реагируем на любой вопрос</h2>
 
-                <form class="form" action="." method="POST">
-                    <div class="form__items">
-                        <div class="form__field">
-                            <input name="name" type="text" required>
+                <form class="feedback_form" action="." method="POST">
+                    <div class="feedback_form__items">
+                        <div class="feedback_form__field">
+                            <input id="name" name="name" type="text" placeholder=" " required>
                             <label for="name">Как Вас зовут?</label>
                         </div>
-                        <div class="form__field">
-                            <input name="city" type="text">
-                            <label for="name">Из какого Вы города?</label>
+                        <div class="feedback_form__field">
+                            <input id="city" name="city" type="text" placeholder=" ">
+                            <label for="city">Из какого Вы города?</label>
                         </div>
-                        <div class="form__field">
-                            <input name="phone" type="tel" required>
-                            <label for="name">Номер телефона</label>
+                        <div class="feedback_form__field">
+                            <input id="phone" name="phone" type="tel" placeholder=" " required maxlength="20">
+                            <label for="phone">Номер телефона</label>
                         </div>
-                        <div class="form__field">
-                            <input name="email" type="email">
-                            <label for="name">Электронная почта</label>
+                        <div class="feedback_form__field">
+                            <input id="email" name="email" type="email" placeholder=" ">
+                            <label for="email">Электронная почта</label>
                         </div>
-                        <div class="form__field">
-                            <input name="question" type="text">
-                            <label for="name">Ваш вопрос</label>
+                        <div class="feedback_form__field">
+                            <input id="question" name="question" type="text" placeholder=" ">
+                            <label for="question">Ваш вопрос</label>
                         </div>
                     </div>
 
@@ -592,8 +696,13 @@
         </div>
     </footer>
     
-  
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+    </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.min.js"></script> -->
     <script src="../dist/js/script.min.js"></script>
 </body>
 </html>

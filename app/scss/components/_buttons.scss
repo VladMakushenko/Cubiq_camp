@@ -1,5 +1,5 @@
 .button {
-    display: inline-block;
+    display: block;
     cursor: pointer;
     text-transform: lowercase;
     font-size: $button_font_size;
@@ -24,6 +24,14 @@
         background-color: transparent;        
     }
 
+    &--centered {
+        margin: 0 auto;
+    }
+
+    &:disabled {
+        filter: grayscale(1)
+    }
+
     &:hover,
     &:focus {
         // background-color: rgba($button_color, 0.8);
@@ -37,5 +45,10 @@
         font-size: 16px;
         line-height: 30px;
         padding: 14px 100px;
+    }
+
+    @include max-width($phone_small)  {
+        padding: 14px 50px;
+        width: 100%;
     }
 }

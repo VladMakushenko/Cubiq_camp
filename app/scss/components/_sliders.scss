@@ -22,6 +22,7 @@
     .swiper-button-next {
         width: 62px !important;
         height: 62px !important;
+        margin: 0 !important;
         border: 1px solid #FFFFFF;
         transition: border-color 250ms ease-in-out;
     
@@ -44,7 +45,11 @@
         background: url('../img/icons/slider_arrow.svg') no-repeat center / auto;
         right: 0 !important;
     }
-
+    
+    .swiper-pagination {
+        line-height: 0;
+    }
+    
     .swiper-pagination-bullet {
         width: 15px;
         height: 5px;
@@ -81,128 +86,127 @@
     }
 }
 
-.lineup_swiper {    
-    width: 1680px;
-    max-width: 100%;
+.lineup_swiper {
     margin: 0 !important;
+    width: 1658px;
+    max-width: 100%;
+    padding-bottom: 120px !important;
 
     .swiper-slide {
-        width: 20%;
+        width: calc(56% / 3 - 8px);
         transition: width 300ms ease-in-out;
 
-        &.wide-slide {
-            width: 42%;
+        &:not(.swiper-slide--is_active) {
+            
+            .swiper-slide__picture {
+                cursor: pointer;
+            }
+
+            .swiper-slide__name span {
+                visibility: hidden;
+            }
         }
 
-        &.show_content {
-            .slide_line,
-            .slide_meaning {
-                display: block;
+        &--is_active {
+            width: 44%;
+
+            .swiper-slide__name .subheading:before {
+                opacity: 1;
+            }
+
+            .swiper-slide__name span {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        figure {
+            position: relative;
+        }
+
+        &__picture {
+            object-fit: cover;
+            object-position: center;
+            // width: 100%;
+            height: 597px;
+            // height: 65vh;
+            // height: 300px;
+        }
+
+        &__name {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+    
+            .subheading {
+                position: relative;
+                flex: 0 0 fit-content;
+                max-width: 250px;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 14px;
+                    right: -75px;
+                    width: 50px;
+                    height: 1px;
+                    background-color: #000000;
+                    opacity: 0;
+                    transition: opacity 300ms ease-in-out;
+                }
+            }
+    
+            span {
+                flex-grow: 1;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0.02em;
+                opacity: 0;
+                transform: translateX(50px);
+                transition: opacity 300ms ease-in-out 250ms,
+                            transform 300ms ease-in-out 250ms;
+                margin-left: 100px;
             }
         }
     }
 
-    .swiper-slide:not(.wide-slide) .slide_image {
-        cursor: pointer;
-    }
-
-    .slide_image {
-        height: 597px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-
-        background-image: url("../img/formats/2.jpg");
-
-        // &.cubiq_camp {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.cubiq_house {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.chalet {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.skyline_luxury {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.norca {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.business {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.sport {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.cubiq_land {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-    }
-
-    .slide_description {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        margin-top: 15px;
-    }
-
-    .slide_name {
-        flex-shrink: 0;
-        font-size: 22px;
-    }
-
-    .slide_line {
-        width: 90px;
-        height: 1px;
-        background-color: #000000;
-        margin: 0 35px;
-        display: none;
-    }
-
-    .slide_meaning {
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.02em;
-        display: none;
-    }
-
     .swiper-button-prev,
     .swiper-button-next {
-        top: 45%;
+        top: calc((100% - 120px) - 50% + 31px);
     }
 
     @include max-width($desktop_medium) {
 
         .swiper-slide {
-            width: 22%;
+            // width: calc(55% / 2 - 8px);
         }
 
-        .swiper-slide.wide-slide {
-            width: 55%;
-        }
+        // .swiper-slide.wide-slide {
+        //     width: 55%;
+        // }
 
-        .slide_name {
-            font-size: 20px;
-            line-height: 30px;
-        }
+        // .slide_name {
+        //     font-size: 20px;
+        //     line-height: 30px;
+        // }
 
-        .slide_line {
-            width: 50px;
-            margin: 0 15px;
-        }
+        // .slide_line {
+        //     width: 50px;
+        //     margin: 0 15px;
+        // }
     }
 
     @include max-width(1365px) {
 
-        .slide_description {
-            justify-content: space-between;
-            margin-top: 10px;
-        }
+        // .slide_description {
+        //     justify-content: space-between;
+        //     margin-top: 10px;
+        // }
 
-        .slide_line {
-            display: none !important;
-        }
+        // .slide_line {
+        //     display: none !important;
+        // }
     }
 
     @include max-width(1200px) {
@@ -289,9 +293,6 @@
         flex-shrink: 0;
         height: 800px;
         margin-left: 80px;
-
-        //
-        background: url('../img/formats/022.jpg') no-repeat center / cover;
     }
 
     .slide-content {
@@ -319,9 +320,10 @@
     .swiper-pagination {
         position: relative;
         width: 62% !important;
-        bottom: 0px !important;
+        bottom: 0 !important;
         text-align: center;
         margin-left: auto;
+        margin-top: 40px;
     }
 
     .swiper-button-prev,
@@ -330,7 +332,9 @@
     }
 
     .swiper-button-prev {
-        display: none !important;
+        // display: none !important;
+        left: auto;
+        right: 0;
     }
 
     @include max-width($desktop_medium) {
@@ -444,206 +448,6 @@
             width: 100% !important;
             display: block;
             margin-top: 15px;
-        }
-    }
-}
-
-
-
-.lineup_slider {    
-    width: 1680px;
-    max-width: 100%;
-    margin: 0 !important;
-
-    .slick-track {
-        display: flex;
-    }
-
-    .lineup_slide {
-        width: 500px;
-        transition: width 300ms ease-in-out;
-        margin: 0 4px;
-
-        &.wide-slide {
-            width: 42%;
-        }
-
-        &.show_content {
-            .slide_line,
-            .slide_meaning {
-                display: block;
-            }
-        }
-    }
-
-    .lineup_slide:not(.wide-slide) .slide_image {
-        cursor: pointer;
-    }
-
-    .slide_image {
-        height: 597px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-
-        background-image: url("../img/formats/2.jpg");
-
-        // &.cubiq_camp {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.cubiq_house {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.chalet {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.skyline_luxury {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.norca {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.business {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.sport {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-        // &.cubiq_land {
-        //     background-image: url("../img/formats/weekend_hotel.jpg");
-        // }
-    }
-
-    .slide_description {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        margin-top: 15px;
-    }
-
-    .slide_name {
-        flex-shrink: 0;
-        font-size: 22px;
-    }
-
-    .slide_line {
-        width: 90px;
-        height: 1px;
-        background-color: #000000;
-        margin: 0 35px;
-        display: none;
-    }
-
-    .slide_meaning {
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.02em;
-        display: none;
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        top: 45%;
-    }
-
-    @include max-width($desktop_medium) {
-
-        .swiper-slide {
-            width: 22%;
-        }
-
-        .swiper-slide.wide-slide {
-            width: 55%;
-        }
-
-        .slide_name {
-            font-size: 20px;
-            line-height: 30px;
-        }
-
-        .slide_line {
-            width: 50px;
-            margin: 0 15px;
-        }
-    }
-
-    @include max-width(1365px) {
-
-        .slide_description {
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-
-        .slide_line {
-            display: none !important;
-        }
-    }
-
-    @include max-width(1200px) {
-
-
-        .swiper-slide:not(.wide-slide) .slide_image {
-            cursor: initial;
-        }
-
-        .swiper-wrapper {
-            transform: translate3d(0px, 0px, 0px);
-            flex-direction: column;
-        }
-
-        .swiper-slide {
-            width: 100% !important;
-        }
-
-        .swiper-slide {
-            margin-bottom: 45px;
-        }
-        
-        .slide_image {
-            height: 330px;
-        }
-
-        .slide_description {
-            width: auto;
-            margin: 10px;
-        }
-
-        .slide_meaning {
-            display: block;
-        }
-
-        .swiper-button-prev,
-        .swiper-button-next {
-            display: none !important;
-        }
-    }
-
-    @include max-width($tablet) {
-
-        .swiper-slide {
-            margin-bottom: 40px;
-        }
-
-        .slide_image {
-            height: 300px;
-        }
-        
-        .slide_description {
-            margin: 10px 50px;
-        }
-    }
-
-    @include max-width(700px) {
-
-        .swiper-slide {
-            background-color: #FFFFFF !important;
-            margin-bottom: 10px;
-        }
-
-        .slide_description {
-            flex-direction: column;
-            align-items: flex-start;
-            margin: 10px 25px;
         }
     }
 }

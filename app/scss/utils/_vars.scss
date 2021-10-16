@@ -29,32 +29,45 @@ $phone_tiny: 320px;
 $min_device_width: $phone_tiny;
 $max_device_width: $desktop;
 
+
 // headings
-// will change
-$h1_font_size_min: 25px;
-$h1_font_size_max: 45px;
-// will change
-$h1_line_height_min: 40px;
-$h1_line_height_max: 60px;
+$h1_font_size--phone: 25px;
+$h1_font_size--tablet: 35px;
+$h1_font_size--tablet_wide: 40px;
+$h1_font_size--desktop: 45px;
 
-// will change
-$h2_font_size_min: 28px;
-$h2_font_size_max: 25px;
-// will change
-$h2_line_height_min: 42px;
-$h2_line_height_max: 35px;
+$h1_line_height--phone: 40px;
+$h1_line_height--tablet: 50px;
+$h1_line_height--tablet_wide: 55px;
+$h1_line_height--desktop: 60px;
 
-// will change
-$h3_font_size_min: 28px;
-$h3_font_size_max: 22px;
-// will change
-$h3_line_height_min: 42px;
-$h3_line_height_max: 32px;
+/* ------------------ */
 
-// text
-// will change
+$h2_font_size--phone: 25px;
+$h2_font_size--tablet: 35px;
+$h2_font_size--tablet_wide: 45px;
+$h2_font_size--desktop: 45px;
+
+$h2_line_height--phone: 37px;
+$h2_line_height--tablet: 55px;
+$h2_line_height--tablet_wide: 60px;
+$h2_line_height--desktop: 60px;
+
+/* ------------------ */
+
+$h3_font_size--phone: 18px;
+$h3_font_size--tablet: 18px;
+$h3_font_size--tablet_wide: 20px;
+$h3_font_size--desktop: 22px;
+
+$h3_line_height--phone: 26px;
+$h3_line_height--tablet: 26px;
+$h3_line_height--tablet_wide: 30px;
+$h3_line_height--desktop: 32px;
+
+/* ------------------ */
+
 $text_font_size_min: 16px;
 $text_font_size_max: 20px;
-// will change
 $text_line_height_min: 30px;
 $text_line_height_max: 37px;

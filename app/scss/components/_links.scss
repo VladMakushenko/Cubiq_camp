@@ -14,5 +14,10 @@
             height: 16px;
             background: url('../img/icons/link_arrow.svg') no-repeat center / contain;
         }
+
+        &:hover:before,
+        &:focus:before {
+            animation: linkTranslate 250ms ease-in-out;
+        }
     }
 }

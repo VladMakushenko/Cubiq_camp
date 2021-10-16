@@ -2,20 +2,27 @@ window.addEventListener('DOMContentLoaded', () => {
     const sliderBreakpoint = window.matchMedia('(max-width: 1200px)');
 
     const lineupSwiperSettings = {
-        // slidesPerView: 'auto',
-        slidesPerView: 4,
+        slidesPerView: 'auto',
+        slidesPerGroup: 4,
         loop: false,
-        speed: 300,
-        simulateTouch: true,
+        speed: 500,
         spaceBetween: 8,
         threshold: 10,
-
-        // slideActiveClass: 'wide-slide',
-        // slideToClickedSlide: true,
+        simulateTouch: false,
 
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+
+        preloadImages: false,
+        lazy: {
+            loadPrevNext: true,
         },
     };
 
@@ -23,6 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 1,
         loop: false,
         speed: 500,
+        threshold: 10,
+        simulateTouch: false,
 
         navigation: {
             nextEl: '.swiper-button-next',
@@ -34,47 +43,74 @@ window.addEventListener('DOMContentLoaded', () => {
             clickable: true,
         },
 
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+
         effect: 'fade',
         fadeEffect: {
             crossFade: true
+        },
+
+        preloadImages: false,
+        lazy: {
+            loadPrevNext: true,
         },
     };
 
     let lineupSwiper = new Swiper('.lineup_swiper', lineupSwiperSettings);    
     let newsSwiper = new Swiper('.news_swiper', newsSwiperSettings);
 
-    lineupSwiper.on('slideChangeTransitionEnd', (e) => {
-        console.log('e: ', e);
-        e.update();
+    lineupSwiper.on('slideNextTransitionStart', (e) => {
+        const lineupSwiperSlides = [...document.querySelectorAll('.swiper-slide')];
+        const nextActiveSlide = document.querySelector('.swiper-slide-next');
+
+        for (let i = 0; i < lineupSwiperSlides.length; i++) {
+            const item = lineupSwiperSlides[i];
+
+            for (let i = 0; i < lineupSwiperSlides.length; i++) {
+                const item = lineupSwiperSlides[i];
+                item.classList.remove('swiper-slide--is_active');
+                nextActiveSlide.classList.add('swiper-slide--is_active');
+            }
+        }
     });
+
+    lineupSwiper.on('slidePrevTransitionStart', (e) => {
+        const lineupSwiperSlides = [...document.querySelectorAll('.swiper-slide')];
+        const activeSlide = document.querySelector('.swiper-slide-active');
+
+        for (let i = 0; i < lineupSwiperSlides.length; i++) {
+            const item = lineupSwiperSlides[i];
+
+            for (let i = 0; i < lineupSwiperSlides.length; i++) {
+                const item = lineupSwiperSlides[i];
+                item.classList.remove('swiper-slide--is_active');
+                activeSlide.classList.add('swiper-slide--is_active');
+            }
+        }
+    });
+
 
     const increaseSlideOnClick = () => {
         const lineupSwiperSlides = [...document.querySelectorAll('.swiper-slide')];
 
         for (let i = 0; i < lineupSwiperSlides.length; i++) {
             const item = lineupSwiperSlides[i];
-            const itemImage = item.querySelector('.slide_image');
+            const itemPicture = item.querySelector('.swiper-slide__picture');
 
-            if (itemImage) {
-                itemImage.addEventListener('click', () => {
-                    // lineupSwiper.update();
+            if (itemPicture) {
+                itemPicture.addEventListener('click', () => {    
     
-                    // const itemIndex = item.dataset.slideIndex;
-                    // lineupSwiper.slideTo(itemIndex - 1);
-    
-                    // setTimeout(() => {
-                        for (let i = 0; i < lineupSwiperSlides.length; i++) {
-                            const item = lineupSwiperSlides[i];
-                            item.classList.remove('wide-slide');
-                            item.classList.remove('show_content');
-                        }
-            
-                        item.classList.add('wide-slide');
-            
-                        setTimeout(() => {
-                            item.classList.add('show_content');
-                        }, 400);
-                    // }, 300);
+                    for (let i = 0; i < lineupSwiperSlides.length; i++) {
+                        const item = lineupSwiperSlides[i];
+                        item.classList.remove('swiper-slide--is_active');
+                        lineupSwiper.update();
+                    }
+        
+                    item.classList.add('swiper-slide--is_active');
+
                 });
             }
         }
@@ -91,7 +127,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (lineupSwiper.destroyed) {
                 lineupSwiper = new Swiper('.lineup_swiper', lineupSwiperSettings);    
                 lineupSwiper.on('slideChange', () => {
-                    lineupSwiper.update();
+                    // lineupSwiper.update();
                 });
             }
 
@@ -112,5 +148,14 @@ window.addEventListener('DOMContentLoaded', () => {
         
         breakpointChecker();
     });
+
+
+
+    $('.hi_tech_modules .button').on('click', function() {
+        $('.modules_list__item').show();
+        $(this).hide();
+    });
+
+
 
 });

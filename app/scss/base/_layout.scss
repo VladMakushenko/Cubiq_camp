@@ -17,31 +17,41 @@
 .wrapper {
     position: relative;
     width: 100%;
-    max-width: 1680px;
+    max-width: 1660px;
     margin: 0 auto;
 
-    @include max-width($desktop) {
-        // padding-left: 120px;
-        // margin-left: 120px;
+    @include max-width(2000px) {
+        max-width: none;
+        margin-right: 0;
+        padding-left: 13.5vw;
+    }
 
-        &--offset_left {
-            margin-right: 0;
-        }
+    @include max-width($tablet_wide) {
+        padding-left: 17.5vw;
+        padding-right: 7vw;
+    }
+
+    @include max-width($tablet) {
+        padding-left: 6.5vw;
+        padding-right: 6.5vw;
     }
 }
-
 
 .flex_container {
     display: flex;
     
-    &--aligned {
+    &--centered {
         align-items: center;
     }
 
+    &--picture_left {
+        flex-direction: row-reverse;
+    }
+
     @include max-width($tablet_wide) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         
-        &--aligned {
+        &--centered {
             align-items: flex-start;
         }
     }
