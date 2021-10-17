@@ -35,7 +35,7 @@
     }
 
     &__phone {
-        @include fluid-text($tablet_wide, $max_device_width, 20px, 30px, 30px, 40px);
+        @include fluid-text($tablet_wide, $desktop, 25px, 30px, 25px, 30px);
         margin-right: 3.125vw;
     }
 
@@ -44,9 +44,8 @@
         align-items: center;
 
         &__item {
-            width: 2.35vw;
-            height: 2.35vw;
-            max-width: 45px;
+            width: 45px;
+            height: 45px;
         }
 
         &__item:not(:last-of-type) {
@@ -60,14 +59,16 @@
     }
 
     @include max-width($tablet_wide) {
-
         &__phone {
-            @include fluid-text($phone_small, $tablet, 15px, 25px, 20px, 34px);
+            @include fluid-text($phone_small, $tablet, 15px, 25px, 15px, 25px);
         }
 
-        .socials_list__item {
-            width: 38px;
-            height: 38px;
+        .socials_list {
+
+            &__item {
+                width: 38px;
+                height: 38px;
+            }
         }
     }
 

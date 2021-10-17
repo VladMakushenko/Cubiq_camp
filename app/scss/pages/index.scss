@@ -1,7 +1,7 @@
 @import '../utils/mixins';
 @import '../utils/vars';
 
-.intro_section {
+.camping_infrastructure {
     width: 100vw;
     min-height: 100vh;
     max-width: 100%;
@@ -189,6 +189,10 @@
                 margin-bottom: 20px;
             }
 
+            li {
+                @include fluid-text($tablet_wide, $desktop, 16px, 18px, 34px, 37px);
+            }
+
             li:not(:last-child) {
                 margin-bottom: 5px;
             }
@@ -215,11 +219,11 @@
 
         h2 {
             @include fluid-text($phone, $tablet_wide, 25px, 30px, 35px, 40px);
-            margin-bottom: 10.8vw;
+            margin-bottom: 12vw;
         }
     
         h2 > span:first-child {
-            @include fluid-text($tablet_wide, $desktop, 72px, 90px, 82px, 100px);
+            @include fluid-text($phone, $tablet_wide, 72px, 90px, 82px, 100px);
             margin-right: 20px;
         }
 
@@ -230,7 +234,11 @@
         }
 
         .modules_list__item .h3 {
-            @include fluid-text($phone, $tablet_wide, 18px, 20px, 26px, 30px);
+            @include fluid-text($tablet, $tablet_wide, 16px, 20px, 26px, 30px);
+        }
+
+        .modules_list__item li {
+            @include fluid-text($tablet, $tablet_wide, 16px, 18px, 34px, 37px);
         }
 
         .modules_list__item:last-child {
@@ -242,11 +250,6 @@
         background-color: #FFFFFF;
         padding: 13vw 0;
 
-        .wrapper {
-            width: 80%;
-            margin: 0 auto;
-        }
-
         .modules_list {
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 10.5vw;
@@ -256,10 +259,6 @@
 
     @include max-width($phone) {
         background-color: #F5F5F5;
-
-        .wrapper {
-            width: 100%;
-        }
 
         h2 {
             justify-content: center;
@@ -283,46 +282,143 @@
 
 .new_generation_options {
 
-    .options_header {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        background: url('../../img/main_page/new_gen_options.jpg') no-repeat center / cover;
-        min-height: 100vh;
-        // max-width: 1920px;
-        // margin: 0 auto;
+    .options {
 
-        @include set-2x-image {
-            background-image: url('../../img/main_page/new_gen_options@2x.jpg');
+        &_header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            background: url('../../img/main_page/new_gen_options.jpg') no-repeat center / cover;
+            min-height: 100vh;
+    
+            @include set-2x-image {
+                background-image: url('../../img/main_page/new_gen_options@2x.jpg');
+            }
+    
+            h2 {
+                @include fluid-text($tablet_wide, $desktop, 40px, 51px, 55px, 65px);
+                color: #FFFFFF;
+                margin-right: 8.4vw;
+                margin-bottom: 6.5vw;
+            }
         }
 
-        h2 {
-            color: #FFFFFF;
-            font-size: 51px;
-            line-height: 65px;
-            margin-right: 160px;
-            margin-bottom: 125px;
+        &_content  {
+            padding: 14vw 0 16.5vw;
         }
-    }
 
-    .options_content {
-        padding: 270px 0 315px;
-    }
+        &_list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 5.2vw;
+            max-width: 90%;
 
-    .options_list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 100px;
-
-        &__item {
-
-            .subheading {
-                margin-bottom: 20px;
+            &--tablet_wide {
+                display: none;
             }
 
-            p {
-                font-size: 16px;
-                line-height: 26px;
+            &__item .subheading {
+                margin-bottom: 1vw;
+            }
+
+            &__item p {
+                @include fluid-text($tablet_wide, $desktop, 15px, 16px, 25px, 26px);
+            }
+        }
+    }
+
+    @include max-width($desktop_medium) {
+        .options {
+
+            &_list {
+
+                &__item .subheading {
+                    max-width: 220px;
+                }
+            }
+        } 
+    }
+
+    @include max-width($tablet_wide) {
+        .options {
+
+            &_header {
+                background-image: url('../../img/main_page/new_gen_options--tablet_wide.jpg');
+                background-position: bottom center;
+
+                h2 {
+                    @include fluid-text($phone, $tablet_wide, 25px, 45px, 37px, 60px);
+                    margin-right: 14.5vw;
+                    margin-bottom: 11vw;
+                }
+            }
+
+            &_content {
+                padding: 15vw 0;
+            }
+
+            &_list {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 100%;
+
+                &--desktop {
+                    display: none;
+                }
+
+                &--tablet_wide {
+                    display: grid;
+                }
+
+                &__item {
+                    position: relative;
+                    padding-left: 95px;
+                }
+
+                &__item svg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                &__item .subheading {
+                    max-width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    @include max-width($tablet) {
+        .options {
+
+            &_list {
+                grid-template-columns: 1fr;
+                grid-gap: 50px;
+            }
+        }
+    }
+
+    @include max-width($phone) {
+        .options {
+
+            &_header {
+                background-image: url('../../img/main_page/new_gen_options--phone.jpg');
+                justify-content: flex-start;
+
+                h2 {
+                    margin-right: 0;
+                    margin-left: 7vw;
+                    margin-bottom: 20vw;
+                }
+            }
+            
+            &_list__item {
+                padding-left: 75px;
+
+                svg {
+                    width: 60px;
+                    height: 60px;
+                }
             }
         }
     }
@@ -331,106 +427,242 @@
 .formats_of_complexes {
 
     .h2 {
-        // @include fluid-text($min_device_width, $max_device_width, $h1_font_size_min, $h1_font_size_max, $h1_line_height_min, $h1_line_height_max);
-        margin-bottom: 90px;
+        @include fluid-text($tablet_wide, $desktop, 30px, 45px, 45px, 60px);
+        margin-bottom: 4.7vw;
+    }
+
+    .button {
+        display: none;
+    }
+
+    @include max-width($tablet_wide) {
+        .h2 {
+            @include fluid-text($phone, $tablet_wide, 25px, 35px, 42px, 50px);
+        }
+
+        .button {
+            display: flex;
+        }
+
+        .swiper-slide:nth-child(n + 6) {
+            display: none;
+        }
+    }
+
+    @include max-width($tablet) {
+        .wrapper {
+            padding: 0;
+        }
+
+        .h2 {
+            margin-left: 14.5vw;
+        }
+
+        .button {
+            margin-left: 6.5vw;
+        }
+    }
+
+    @include max-width($phone) {
+        .h2 {
+            margin-left: 25px;
+        }
+
+        .button {
+            width: calc(100% - 40px);
+            margin: 40px 20px 0;
+        }
     }
 }
 
 .payback_calculation {
-    padding: 170px 0;
+    padding: 13vw 0 15vw;
+
+    .emphasis_text,
+    .calculation_list {
+        max-width: 1200px;
+    }
 
     .emphasis_text {
-        margin-bottom: 140px;
-        max-width: 1200px;
+        margin-bottom: 7vw;
     }
 
     .calculation_list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 100px;
-        max-width: 1200px;
-        margin-bottom: 120px;
+        grid-gap: 5.2vw;
+        margin-bottom: 6.2vw;
 
         &__item {
-            font-size: 33px;
-            line-height: 50px;
+            @include fluid-text($tablet_wide, $desktop, 22px, 33px, 32px, 50px);
             font-weight: 100;
             opacity: 0.8;
         }
 
+        &__item p:first-child {
+            margin-bottom: 10px;
+        }
+
         &__item span {
-            font-size: 70px;
+            @include fluid-text($tablet_wide, $desktop, 45px, 70px, 45px, 50px);
+        }
+    }
+
+    @include max-width($tablet_wide) {
+        padding: 18vw 0;
+        
+        .emphasis_text {
+            @include fluid-text($phone, $tablet_wide, 22px, 30px, 32px, 45px);
+            margin-bottom: 10vw;
+        }
+
+        .calculation_list {
+            grid-gap: 12vw;
+            margin-bottom: 10vw;
+
+            &__item {
+                @include fluid-text($phone, $tablet_wide, 22px, 28px, 32px, 38px);
+            }
+    
+            &__item span {
+                @include fluid-text($phone, $tablet_wide, 45px, 60px, 50px, 50px);
+            }
+        }
+    }
+
+    @include max-width($tablet) {
+        padding: 14vw 0;
+    }
+
+    @include max-width($phone) {
+        padding: 22vw 0;
+
+        .emphasis_text {
+            margin-bottom: 11vw;
+        }
+
+        .calculation_list {
+            grid-template-columns: 1fr;
+            margin-bottom: 13vw;
         }
     }
 }
 
 .iterium_tech_news {
 
-    .h2 {
-        // @include fluid-text($min_device_width, $max_device_width, $h1_font_size_min, $h1_font_size_max, $h1_line_height_min, $h1_line_height_max);
-    }
-
     .wrapper > .h2 {
-        margin-bottom: 60px;
         display: none;
     }
     
     .wrapper > .button {
-        margin: 50px auto 0;
         display: none;
     }
 
-    @include max-width($desktop_medium) {
-        // padding: 0 0 100px 180px;
-    }
-
     @include max-width($tablet_wide) {
+        .wrapper {
+            padding-right: 0;
+        }
 
         .wrapper > .h2 {
+            @include fluid-text($phone, $tablet_wide, 28px, 35px, 42px, 60px);
+            margin-bottom: 5vw;
             display: block;
         }
     }
 
     @include max-width($tablet) {
-        // padding: 0 0 125px;
+        .wrapper {
+            padding: 0;
+        }
 
         .wrapper > .h2 {
-            margin-left: 25px;
-            margin-bottom: 35px;
+            margin-left: 6.5vw;
         }
     }
 
     @include max-width($phone) {
-        // padding: 0 0 60px;
-
         .wrapper > .button {
-            display: block;
+            display: flex;
+            width: calc(100% - 40px);
+            margin: 50px auto 0;
         }
     }
 }
 
 .feedback {
-    padding: 240px 0 150px;
+    padding: 12.5vw 0 8vw;
 
     .emphasis_text {
-        margin-bottom: 100px;
+        margin-bottom: 5vw;
     }
 
     &_form {
+        width: 90%;
 
         &__items {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin-bottom: 80px;
+            margin-bottom: 5vw;
         }
 
         &__field {
+            @include fluid-text($tablet, $desktop, 16px, 20px, 34px, 37px);
             width: calc(50% - 35px);
         }
 
         &__field:not(:last-child) {
             margin-bottom: 70px;
+        }
+    }
+
+    @include max-width($tablet_wide) {
+        padding: 15vw 0 10vw;
+
+        .emphasis_text {
+            @include fluid-text($phone, $tablet_wide, 22px, 30px, 32px, 45px);
+            margin-bottom: 6vw;
+        }
+
+        &_form {
+            width: 70%;
+
+            &__items {
+                flex-direction: column;
+            }
+
+            &__field {
+                width: 100%;
+            }
+        }
+    }
+
+    @include max-width($tablet) {
+        padding: 14vw 0;
+
+        .emphasis_text {
+            margin-bottom: 80px;
+        }
+
+        &_form {
+
+            &__items {
+                margin-bottom: 80px;
+            }
+        }
+    }
+
+    @include max-width($phone) {
+        .emphasis_text {
+            margin-bottom: 70px;
+        }
+
+        &_form {
+            width: 100%;
+
+            &__items {
+                margin-bottom: 70px;
+            }
         }
     }
 }
