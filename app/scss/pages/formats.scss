@@ -79,6 +79,7 @@
 
     @include max-width($phone) {
         .financial_evaluation {
+            padding-top: 25vw;
 
             &__image {
                 background-image: url('../../img/formats_page/intro--phone.jpg');
@@ -107,6 +108,7 @@
         grid-gap: 20px;
 
         &__item {
+            position: relative;
             height: 33vw;
             max-height: 634px;
             
@@ -225,7 +227,7 @@
         .budget_grid__item {
 
             &--calculation {
-                padding: 10vw 5.5vw 6vw;
+                padding: 8vw 5vw;
             }
 
             img {
@@ -238,20 +240,24 @@
         }
 
         .budget_list__item span {
-            @include fluid-text($phone, $tablet, 30px, 40px, 35px, 50px);
+            @include fluid-text($phone, $tablet, 25px, 40px, 30px, 50px);
         }
     }
 
     @include max-width($phone) {
-        padding: 14vw 0 0;
+        padding: 10vw 0 0;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
 
         .wrapper {
             padding: 0;
         }
 
         h2 {
-            padding-left: 25px;
-            margin-bottom: 9vw;
+            padding: 0 25px;
+            margin-bottom: 8vw;
         }
         
         .budget_grid {
@@ -266,8 +272,18 @@
 
             &--calculation {
                 height: auto;
-                padding: 10vw;
+                padding: 11vw 18vw;
                 margin-top: 8vw;
+            }
+
+            &--calculation:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: url('../../img/patterns/formats_page_pattern.svg') no-repeat center / auto;
             }
 
             img {
@@ -279,18 +295,22 @@
             }
         }
 
-        .budget_list {
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-
-        .budget_list__item {
-            width: calc(50% - 5vw);
+        .budget_list__item:not(:last-child) {
             margin-bottom: 10vw;
         }
 
         .budget_list__item p:first-child {
             margin-bottom: 6px;
+        }
+
+        .budget_list__item p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .budget_list__item span {
+            font-size: 30px;
+            line-height: 35px;
         }
     }
 }

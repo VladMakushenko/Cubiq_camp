@@ -44,6 +44,7 @@
     &__name {
         @include fluid-text($tablet_wide, $max_device_width, 16px, 18px, 22px, 25px);
         font-weight: 500;
+        white-space: nowrap;
     }
 
     &__line {
@@ -67,20 +68,16 @@
     }
 
     @include max-width($tablet_wide) {
-        // height: 5vw;
+        height: 5vw;
 
         &__name {
             font-size: 18px;
             line-height: 25px;
         }
-
-        &__line {
-            // margin: 0 55px;
-        }
         
         &__logo {
-            // width: 20vw;
-            // max-width: 196px;
+            width: 20vw;
+            max-width: 196px;
         }
     }
 

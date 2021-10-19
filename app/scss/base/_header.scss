@@ -1,8 +1,8 @@
 .header {
     display: flex;
     align-items: center;
-    margin-top: 5.5vh;
-    margin-right: 5.25vw;
+    margin-top: 3.2vw;
+    margin-right: 6.4vw;
     position: absolute;
     top: 0;
     right: 0;
@@ -59,6 +59,8 @@
     }
 
     @include max-width($tablet_wide) {
+        margin-top: 6vw;
+
         &__phone {
             @include fluid-text($phone_small, $tablet, 15px, 25px, 15px, 25px);
         }

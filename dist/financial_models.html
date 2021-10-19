@@ -57,7 +57,7 @@
     <!-- temporarily -->
     <div id="page_navigator" class="page_navigator">
         <div class="page_navigator__content">
-            <span class="page_navigator__name">Главная</span>
+            <span class="page_navigator__name">Финансовые модели</span>
             <span class="page_navigator__line"></span>
             <img class="page_navigator__logo" src="./img/cubiq_camp.svg" alt="cubiq.camp">
         </div>
@@ -66,8 +66,8 @@
     <main class="main">
         <section class="intro_section" data-theme="gray">
             <div class="wrapper wrapper--intro">
-                <article class="robust_economy_projects">
-                    <div class="robust_economy_projects__text">
+                <article class="our_projects">
+                    <div class="our_projects__text">
                         <h1 class="h1 h1--uppercase">Проекты с&nbsp;сильной экономикой</h1>
                         
                         <div class="annual_profit">
@@ -83,21 +83,34 @@
                             <p>окупаемость проекта</p>
                         </div>
                     </div>
-                    <div class="robust_economy_projects__pictures">
-                        <img src="./img/financial_models/intro_01@2x.jpg" alt="">
-                        <img src="./img/financial_models/intro_02@2x.jpg" alt="">
-                        <img src="./img/financial_models/intro_03@2x.jpg" alt="">
+
+                    <div class="our_projects__pictures">
+                        <picture>
+                            <source media="(max-width: 500px)" srcset="./img/financial_models_page/intro_01--phone.jpg">
+                            <source media="(max-width: 1024px)" srcset="./img/financial_models_page/intro_01--tablet.jpg">
+                            <img src="./img/financial_models_page/intro_01.jpg" alt="">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 500px)" srcset="./img/financial_models_page/intro_02--phone.jpg">
+                            <source media="(max-width: 1024px)" srcset="./img/financial_models_page/intro_02--tablet.jpg">
+                            <img src="./img/financial_models_page/intro_02.jpg" alt="">
+                        </picture>
+                        <picture>
+                            <img src="./img/financial_models_page/intro_03.jpg" alt="">
+                        </picture>
                     </div>
+
+                    <h1 class="h1 h1--uppercase h1--tablet_wide">Проекты<br> с&nbsp;сильной экономикой</h1>
                 </article>
             </div>
         </section>
 
         <article class="our_economist" data-theme="gray">
             <div class="wrapper">
-                <div class="flex_container">
+                <div class="flex_container flex_container--centered">
                     <picture class="flex_container__item flex_container__item--picture">
-                        <!-- <source media="(max-width: 500px)" srcset="./img/financial_models/economist--phone.jpg"> -->
-                        <img src="./img/financial_models/economist.jpg" alt="Елена Корнишина — экономист ITERIUM.tech" title="Елена Корнишина — экономист ITERIUM.tech">
+                        <source media="(max-width: 500px)" srcset="./img/financial_models_page/economist--phone.jpg">
+                        <img src="./img/financial_models_page/economist.jpg" alt="Елена Корнишина — экономист ITERIUM.tech" title="Елена Корнишина — экономист ITERIUM.tech">
                     </picture>
                     <div class="flex_container__item flex_container__item--text">
                         <h2 class="h2">Елена Корнишина</h2>
@@ -109,22 +122,29 @@
                         <p>За каждую цифру несу персональную ответственность и могу дать подробные комментарии. Свяжитесь со мной, если возникнут вопросы.</p>
                         <p>С уважением, Елена</p>
 
-                        <div class="phone_number icon">
-                            <svg width="23" height="37" viewBox="0 0 23 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20.7125 36.1894H1.98279C1.41522 36.1894 0.847656 35.6219 0.847656 35.0543V1.94617C0.847656 1.37861 1.41522 0.811035 1.98279 0.811035H20.7125C21.2801 0.811035 21.8477 1.37861 21.8477 1.94617V35.0543C21.8477 35.6219 21.4693 36.1894 20.7125 36.1894Z" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M7.46924 4.78418H21.8476" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M9.92847 33.5405H12.7663" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M0.847656 30.8921H15.226" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <a href="tel:+79312527455">+ 7-931-252-74-55</a>
-                        </div>
-                        <div class="economist_email icon">
-                            <svg width="33" height="27" viewBox="0 0 33 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.0144 20.5624L6.35777 26.2449V20.5624H1V0.754883H31.8478V13.2564L23.0805 20.5624H13.0144Z" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M21.7812 12.7686H13.0139" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M21.7814 7.89844H13.0142" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <a href="mailto:kornishina@iterium.tech">kornishina@iterium.tech</a>
+                        <div class="icons">
+                            <p class="icons__item">
+                                <a href="tel:+79312527455">
+                                    <svg width="23" height="37" viewBox="0 0 23 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.7125 36.1894H1.98279C1.41522 36.1894 0.847656 35.6219 0.847656 35.0543V1.94617C0.847656 1.37861 1.41522 0.811035 1.98279 0.811035H20.7125C21.2801 0.811035 21.8477 1.37861 21.8477 1.94617V35.0543C21.8477 35.6219 21.4693 36.1894 20.7125 36.1894Z" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.46924 4.78418H21.8476" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.92847 33.5405H12.7663" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M0.847656 30.8921H15.226" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>+ 7-931-252-74-55</span>
+                                </a>
+                            </p>
+
+                            <p class="icons__item">
+                                <a href="mailto:kornishina@iterium.tech">
+                                    <svg width="33" height="27" viewBox="0 0 33 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.0144 20.5624L6.35777 26.2449V20.5624H1V0.754883H31.8478V13.2564L23.0805 20.5624H13.0144Z" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21.7812 12.7686H13.0139" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21.7814 7.89844H13.0142" stroke="#43474D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>kornishina@iterium.tech</span>
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -139,88 +159,60 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide swiper-slide--is_active" data-slide-index="0">
                             <figure>
-                                <img class="swiper-slide__picture" src="./img/formats/slider/weekend_hotel.jpg" alt="Отель выходного дня" title="Отель выходного дня">
+                                <picture class="swiper-slide__picture">
+                                    <source media="(max-width: 500px)" srcset="./img/financial_models_page/slider/start--phone.jpg">
+                                    <source media="(max-width: 1024px)" srcset="./img/financial_models_page/slider/start--tablet.jpg">
+                                    <img src="./img/financial_models_page/slider/start.jpg" alt="START — гостеприимная база для спокойного отдыха в красивом месте недалеко от города" title="START">
+                                </picture>
                                 <figcaption class="swiper-slide__name">
-                                    <h3 class="swiper-slide__title subheading">Отель выходного дня</h3>
+                                    <h3 class="swiper-slide__title subheading">START</h3>
                                     <span class="swiper-slide__line"></span>
-                                    <span class="swiper-slide__description">Гостеприимная база для спокойного отдыха в&nbsp;красивом месте недалеко от города</span>
+                                    <span class="swiper-slide__description">гостеприимная база для спокойного отдыха в&nbsp;красивом месте недалеко от города</span>
                                 </figcaption>
                             </figure>
                         </div>
 
                         <div class="swiper-slide" data-slide-index="1">
                             <figure>
-                                <img class="swiper-slide__picture" src="./img/formats/slider/camping.jpg" alt="Охотничий или рыболовный кемпинг" title="Охотничий или рыболовный кемпинг">
+                                <picture class="swiper-slide__picture">
+                                    <source media="(max-width: 500px)" srcset="./img/financial_models_page/slider/mini--phone.jpg">
+                                    <source media="(max-width: 1024px)" srcset="./img/financial_models_page/slider/mini--tablet.jpg">
+                                    <img src="./img/financial_models_page/slider/start.jpg" alt="MINI — инфраструктура для организации небольшого кемпинга или отеля на 7 номеров" title="MINI">
+                                </picture>
                                 <figcaption class="swiper-slide__name">
-                                    <h3 class="swiper-slide__title subheading">Охотничий или рыболовный кемпинг</h3>
+                                    <h3 class="swiper-slide__title subheading">MINI</h3>
                                     <span class="swiper-slide__line"></span>
-                                    <span class="swiper-slide__description">Благоустроенный кемпинг для любителей рыбной ловли или охоты</span>
+                                    <span class="swiper-slide__description">инфраструктура для организации небольшого кемпинга или отеля на 7 номеров</span>
                                 </figcaption>
                             </figure>
                         </div>
 
                         <div class="swiper-slide" data-slide-index="2">
                             <figure>
-                                <img class="swiper-slide__picture" src="./img/formats/slider/relax_complex.jpg" alt="Пляжный Relax комплекс" title="Пляжный Relax комплекс">
+                                <picture class="swiper-slide__picture">
+                                    <source media="(max-width: 500px)" srcset="./img/financial_models_page/slider/midi--phone.jpg">
+                                    <source media="(max-width: 1024px)" srcset="./img/financial_models_page/slider/midi--tablet.jpg">
+                                    <img src="./img/financial_models_page/slider/start.jpg" alt="MIDI — комплекс на 10 номеров и павильон для мероприятий для участков без коммуникаций" title="MIDI">
+                                </picture>
                                 <figcaption class="swiper-slide__name">
-                                    <h3 class="swiper-slide__title subheading">Пляжный Relax комплекс</h3>
+                                    <h3 class="swiper-slide__title subheading">MIDI</h3>
                                     <span class="swiper-slide__line"></span>
-                                    <span class="swiper-slide__description">SPA-комплекс для длительного отдыха на берегу водоема – озера, моря, океана</span>
+                                    <span class="swiper-slide__description">комплекс на 10 номеров и павильон для мероприятий для участков без коммуникаций</span>
                                 </figcaption>
                             </figure>
                         </div>
 
                         <div class="swiper-slide" data-slide-index="3">
                             <figure>
-                                <img class="swiper-slide__picture" src="./img/formats/slider/ski_resort.jpg" alt="Горнолыжная деревня" title="Горнолыжная деревня">
+                                <picture class="swiper-slide__picture">
+                                    <source media="(max-width: 500px)" srcset="./img/financial_models_page/slider/maxi--phone.jpg">
+                                    <source media="(max-width: 1024px)" srcset="./img/financial_models_page/slider/maxi--tablet.jpg">
+                                    <img src="./img/financial_models_page/slider/start.jpg" alt="MAXI — полноценная инфраструктура для автономного отеля или кемпинга на 15 номеров" title="MAXI">
+                                </picture>
                                 <figcaption class="swiper-slide__name">
-                                    <h3 class="swiper-slide__title subheading">Горнолыжная деревня</h3>
+                                    <h3 class="swiper-slide__title subheading">MAXI</h3>
                                     <span class="swiper-slide__line"></span>
-                                    <span class="swiper-slide__description">Курорт для любителей гор, зимнего туризма или активного отдыха – альпинизма, сноуборда, горных лыж</span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="swiper-slide" data-slide-index="4">
-                            <figure>
-                                <img class="swiper-slide__picture" src="./img/formats/slider/holiday_resort.jpg" alt="База активного отдыха" title="База активного отдыха">
-                                <figcaption class="swiper-slide__name">
-                                    <h3 class="swiper-slide__title subheading">База активного отдыха</h3>
-                                    <span class="swiper-slide__line"></span>
-                                    <span class="swiper-slide__description">Комплекс в&nbsp;живописном месте для активного времяпрепровождения</span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="swiper-slide" data-slide-index="5">
-                            <figure>
-                                <img class="swiper-slide__picture" src="./img/formats/slider/residence.jpg" alt="Резиденция для мероприятий" title="Резиденция для мероприятий">
-                                <figcaption class="swiper-slide__name">
-                                    <h3 class="swiper-slide__title subheading">Резиденция для мероприятий</h3>
-                                    <span class="swiper-slide__line"></span>
-                                    <span class="swiper-slide__description">Отдых и организация мероприятий для частных или корпоративных клиентов: банкеты, свадьбы, семинары, конференции и&nbsp;другие бизнес-события</span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="swiper-slide" data-slide-index="6">
-                            <figure>
-                                <img class="swiper-slide__picture" src="./img/formats/slider/luxury_hotel.jpg" alt="Luxury отель в видовой локации" title="Luxury отель в видовой локации">
-                                <figcaption class="swiper-slide__name">
-                                    <h3 class="swiper-slide__title subheading">Luxury отель в видовой локации</h3>
-                                    <span class="swiper-slide__line"></span>
-                                    <span class="swiper-slide__description">Пятизвездочный комплекс для длительного отдыха в&nbsp;красивом месте</span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="swiper-slide" data-slide-index="7">
-                            <figure>
-                                <img class="swiper-slide__picture" src="./img/formats/slider/boarding_house.jpg" alt="Санаторно-оздоровительный центр" title="Санаторно-оздоровительный центр">
-                                <figcaption class="swiper-slide__name">
-                                    <h3 class="swiper-slide__title subheading">Санаторно-оздоровительный центр</h3>
-                                    <span class="swiper-slide__line"></span>
-                                    <span class="swiper-slide__description">Пансионат или курортно-восстановительный центр с&nbsp;оказанием медицинских и&nbsp;профилактических услуг</span>
+                                    <span class="swiper-slide__description">полноценная инфраструктура для автономного отеля или кемпинга на 15 номеров</span>
                                 </figcaption>
                             </figure>
                         </div>

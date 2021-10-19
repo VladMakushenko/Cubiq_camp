@@ -4,6 +4,30 @@
         position: relative;
     }
 
+    &--type_dots {
+
+        .list__item {
+            padding-left: 42px;
+        }
+
+        .list__item:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: $main_color;
+        }
+
+        .list__item--transparent:before {
+            background-color: transparent;
+            border: 1px solid $main_color;
+        }
+    }
+
     &--type_arrows {
 
         .list__item {
@@ -13,8 +37,8 @@
         .list__item:before {
             content: '';
             position: absolute;
-            top: calc(50% - 11px);
-            transform: translateY(50%);
+            top: 50%;
+            transform: translateY(-50%);
             left: 0;
             width: 10px;
             height: 11px;

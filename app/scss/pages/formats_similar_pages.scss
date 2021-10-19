@@ -1,0 +1,327 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+.header {
+    &__phone {
+        color: #FFFFFF;
+        font-weight: 400;
+    }
+
+    .socials_list path {
+        fill: #FFFFFF;
+    }
+
+    @include max-width($tablet_wide) {
+        &__phone {
+            color: $main_color;
+            font-weight: 300;
+        }
+    
+        .socials_list path {
+            fill: #161C23;
+        }
+    }
+}
+
+.intro_section {
+    
+    .intro_block {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &__text {
+            max-width: 400px;
+            margin-right: 3.6vw;
+
+            .h1 {
+                margin-bottom: 2vw;
+            }
+        }
+    
+        &__image {
+            background: url('../../img/formats/weekend_hotel_page/intro.jpg') no-repeat 0 50% / cover;
+            width: 58vw;
+            height: 100%;
+            flex-shrink: 0;
+        }
+    }
+
+    @include max-width($tablet_wide) {        
+        .intro_block {
+            height: auto;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 20vw;
+
+            &__text {
+                margin-right: 0;
+                margin-bottom: 6vw;
+
+                .h1 {
+                    margin-bottom: 4vw;
+                }
+            }
+
+            &__image {
+                background-position: center;
+                width: 100%;
+                height: 885px;
+            }
+        }
+    }
+
+    @include max-width($tablet) {
+        .intro_block {
+            padding-top: 22vw;
+
+            &__text {
+                padding-left: 6vw;
+            }
+
+            &__image {
+                background-image: url('../../img/formats/weekend_hotel_page/intro--tablet.jpg');
+                background-position: center;
+                height: 600px;
+            }
+        }
+    }
+
+    @include max-width($phone) {
+        // .intro_block {
+        //     padding-top: 25vw;
+
+        //     &__image {
+        //         background-image: url('../../img/formats_page/intro--phone.jpg');
+        //         height: 42vh;
+        //         min-height: 433px;
+        //     }
+        // }
+    }
+}
+
+.infrastructure {
+    padding: 6.5vw 0 15vw;
+
+    .brings_income {
+        display: flex;
+        margin-top: 10px;
+
+        svg {
+            margin-right: 8px;
+        }
+    }
+
+    .project_features {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 100px 50px;
+        margin-top: 5.2vw;
+
+        &__item {
+            position: relative;
+            padding-left: 125px;
+
+            .subheading {
+                position: relative;
+                display: inline-block;
+                @include fluid-text($tablet_wide, $desktop, 18px, 20px, 26px, 28px);
+                margin-bottom: 15px;
+            }
+
+            em {
+                font-style: normal;
+                font-weight: 300;
+            }
+
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            p {
+                @include fluid-text($tablet_wide, $desktop, 16px, 18px, 24px, 28px);
+                margin-bottom: 10px;
+            }
+
+            &--brings_income {
+
+                .subheading {
+                    padding-right: 50px;
+                }
+            
+                .subheading:before {
+                    content: '';
+                    position: absolute;
+                    top: -4px;
+                    right: 0;
+                    width: 34px;
+                    height: 35px;
+                    background: url('../../img/icons/income.svg') no-repeat center / contain;
+                }
+            }
+        }
+    }
+
+    @include max-width($desktop_medium) {
+        .project_features {
+            width: 95%;
+
+            svg {
+                width: 80px;
+            }
+        }
+    }
+}
+
+.land_plot {
+    padding-bottom: 7.5vw;
+
+    .h2 {
+        margin-bottom: 3.5vw;
+    }
+
+    .flex_container {
+        padding-right: 30px;
+
+        &__item--picture {
+            width: 926px;
+            max-width: 60%;
+        }
+
+        &__item--text {
+            flex: 0 1 560px;
+            margin-left: 3.5vw;
+        }
+    }
+
+    ul {
+
+        li {
+            @include fluid-text($tablet_wide, $desktop, 14px, 20px, 26px, 37px);
+            display: flex;
+        }
+
+        li:not(:last-child) {
+            margin-bottom: 2vw;
+        }
+
+        li svg {
+            flex-shrink: 0;
+            margin-right: 30px;
+        }
+    }
+
+    @include max-width($desktop_medium) {
+        svg {
+            width: 30px;
+        }
+    }
+}
+
+.investment,
+.efficiency {
+
+    .h2 {
+        margin-bottom: 5vw;
+    }
+
+    ul {
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5vw;
+
+        li {
+            @include fluid-text($tablet_wide, $desktop, 14px, 20px, 22px, 31px);
+
+            &.vertical_align {
+                margin: auto 0;
+            }
+        }
+
+        span {
+            display: inline-block;
+            @include fluid-text($tablet_wide, $desktop, 14px, 16px, 22px, 24px);
+            letter-spacing: 0.02em;
+            margin-top: 12px;
+        }
+
+        .number {
+            @include fluid-text($tablet_wide, $desktop, 40px, 65px, 50px, 75px);
+            margin-bottom: 5px;
+        }
+    }
+
+    sup {
+        font-size: 12px;
+    }
+
+    small {
+        display: inline-block;
+        @include fluid-text($tablet_wide, $desktop, 14px, 16px, 22px, 24px);
+        letter-spacing: 0.02em;
+
+        sup {
+            margin-left: -8px;
+        }
+    }
+}
+
+.investment {
+    padding-bottom: 6.2vw;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../../img/patterns/formats_page_pattern_alt.svg') no-repeat center / auto;
+    }
+
+    small {
+        margin: 7.5vw 0 4.2vw;
+    }
+
+    .investment_pictures {
+        display: flex;
+        margin-left: -70px;
+
+        picture {
+            height: 28vw;
+            max-height: 533px;
+
+            &:first-child {
+                flex: 0 1 70%;
+                margin-right: 8px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @include max-width($tablet) {
+        .investment_pictures {
+            margin-left: 0;
+        }
+    }
+}
+
+.efficiency {
+    padding-bottom: 8vw;
+
+    small {
+        margin: 8vw 0 0;
+    }
+}

@@ -24,7 +24,7 @@ strong {
 }
 
 .h2 {
-    @include fluid-text($tablet_wide, $desktop, $h2_font_size--tablet, $h2_font_size--desktop, $h2_line_height--tablet, $h2_line_height--desktop);
+    @include fluid-text($tablet_wide, $desktop, $h2_font_size--phone, $h2_font_size--desktop, $h2_line_height--phone, $h2_line_height--desktop);
     font-weight: 300;
 
     @include max-width($tablet_wide) {
