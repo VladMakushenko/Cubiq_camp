@@ -1,0 +1,24 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+.latest_development {
+    padding-top: 10.5vw;
+
+    .wrapper {
+        max-width: none;
+        padding-left: 13.6vw;
+    }
+
+    .news_swiper {
+
+        .datetime {
+            margin-bottom: 2.6vw;
+        }
+
+        h2 {
+            font-size: 50px;
+            line-height: 65px;
+            font-weight: 100;
+        }
+    }
+}

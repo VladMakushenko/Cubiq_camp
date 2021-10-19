@@ -296,7 +296,7 @@
             }
     
             h2 {
-                @include fluid-text($tablet_wide, $desktop, 40px, 51px, 55px, 65px);
+                @include fluid-text($tablet_wide, $desktop, 32px, 51px, 46px, 65px);
                 color: #FFFFFF;
                 margin-right: 8.4vw;
                 margin-bottom: 6.5vw;
@@ -329,6 +329,14 @@
 
     @include max-width($desktop_medium) {
         .options {
+
+            &_header {
+
+                h2 {
+                    margin-right: 7.4vw;
+                    margin-bottom: 5.5vw;
+                }
+            }
 
             &_list {
 
@@ -505,6 +513,7 @@
 
         &__item span {
             @include fluid-text($tablet_wide, $desktop, 45px, 70px, 45px, 50px);
+            font-weight: 300;
         }
     }
 

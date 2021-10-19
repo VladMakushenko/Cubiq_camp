@@ -7,7 +7,7 @@ strong {
 }
 
 .h1 {
-    @include fluid-text($tablet_wide, $desktop, $h1_font_size--tablet, $h1_font_size--desktop, $h1_line_height--tablet, $h1_line_height--desktop);
+    @include fluid-text($tablet_wide, $desktop, $h1_font_size--phone, $h1_font_size--desktop, $h1_line_height--phone, $h1_line_height--desktop);
     font-weight: 300;
 
     @include max-width($tablet_wide) {
@@ -59,10 +59,14 @@ strong {
 }
 
 .subheading {
-    @include fluid-text($min_device_width, $max_device_width, 16px, 18px, 24px, 28px);
+    @include fluid-text($min_device_width, $max_device_width, 15px, 18px, 24px, 28px);
     font-weight: 600;
     color: rgba($main_color, 0.9);
     text-transform: uppercase;
+
+    &--underlined {
+        text-decoration: underline;
+    }
 }
 
 .emphasis_text {

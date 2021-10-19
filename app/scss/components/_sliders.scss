@@ -86,7 +86,7 @@
     }
 }
 
-.lineup_swiper {
+.formats_slider {
     margin: 0 !important;
     width: 1660px;
     max-width: 100%;
@@ -94,7 +94,7 @@
 
     .swiper-slide {
         width: calc(56% / 3 - 8px);
-        transition: width 300ms ease-in-out;
+        transition: width 500ms ease-in-out;
 
         &:not(.swiper-slide--is_active) {
             
@@ -102,7 +102,7 @@
                 cursor: pointer;
             }
 
-            .swiper-slide__name span {
+            .swiper-slide__description {
                 visibility: hidden;
             }
         }
@@ -110,13 +110,9 @@
         &--is_active {
             width: 44%;
 
-            .swiper-slide__title {
-                flex: 0 1 fit-content;
-                max-width: 100%;
-            }
-
             .swiper-slide__line {
                 opacity: 1;
+                flex-basis: 30%;
             }
 
             .swiper-slide__description {
@@ -147,31 +143,31 @@
         &__title {
             @include fluid-text($tablet_wide, $desktop, 12px, 18px, 20px, 28px);
             flex: 1 0 fit-content;
-            max-width: 80%;
         }
 
         &__line {
-            flex: 0 0 50px;
-            height: 1px;
-            background-color: #000000;
+            flex: 1 1 0;
+            height: 0.5px;
+            background-color: $main_color;
             opacity: 0;
-            transition: opacity 300ms ease-in-out 400ms;
             margin: 14px 25px 0;
+            transition: opacity 300ms ease-in-out 300ms,
+                        flex-basis 300ms ease-in-out 300ms;
         }
 
         &__description {
-            @include fluid-text($tablet_wide, $desktop, 12px, 16px, 20px, 26px);
+            @include fluid-text($tablet_wide, $desktop, 11px, 16px, 18px, 26px);
             letter-spacing: 0.02em;
             opacity: 0;
             transform: translateX(50px);
-            transition: opacity 300ms ease-in-out 250ms,
-                        transform 300ms ease-in-out 250ms;
+            transition: opacity 300ms ease-in-out 600ms,
+                        transform 300ms ease-in-out 600ms;
         }
     }
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: calc((100% - 120px) - 50% + 31px);
+        top: calc(50% - (62px / 2) - (150px / 2));
     }
 
     @include max-width($desktop_medium) {
@@ -180,6 +176,10 @@
 
             &--is_active {
                 width: 40% !important;
+            }
+
+            &__line {
+                margin: 11px 20px 0;
             }
         }
     }
@@ -312,6 +312,7 @@
         }
 
         .description {
+            @include fluid-text($phone, $desktop, 14px, 18px, 20px, 30px);
             opacity: 0.5;
             margin: 1.5vw 0;
         }
@@ -333,17 +334,55 @@
         bottom: 0 !important;
         text-align: center;
         margin-left: auto;
-        margin-top: 2vw;
+        margin-top: 40px;
     }
 
     .swiper-button-prev,
     .swiper-button-next {
-        top: calc(50% - 62px / 2 - 2vw);
+        top: calc(50% - (62px / 2) - (40px / 2));
     }
 
     .swiper-button-prev {
         left: auto !important;
         right: calc(70% - 62px);
+    }
+
+    &--left_dots {
+
+        .swiper-pagination {
+            position: absolute;
+            width: auto !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            text-align: left;
+            margin: 0;
+        }
+
+        .swiper-pagination-bullet {
+            width: 24px;
+            height: 5px;
+        }
+    
+        .swiper-pagination-bullet-active {
+            width: 80px;
+            height: 5px;
+        }
+    }
+
+    &--large_arrows {
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 100px !important;
+            height: 100px !important;
+            border-width: 2px;
+            background-size: 18px 36px;
+            top: calc(50% - 100px / 2);
+        }
+
+        .swiper-button-prev {
+            right: calc(70% - 100px);
+        }
     }
 
     @include max-width($tablet_wide) {

@@ -19,7 +19,8 @@ const path = {
         html: './app/*.html',
         mainCss: './app/scss/main_style.scss',
         pagesCss: './app/scss/pages/*.scss',
-        js: './app/js/*.js',
+        mainJs: './app/js/*.js',
+        pagesJs: './app/js/pages/*.js',
         img: './app/img/**/*.*',
         fonts: './app/fonts/**/*.*',
     },
@@ -27,7 +28,8 @@ const path = {
         html: './dist/',
         mainCss: './dist/css/',
         pagesCss: './dist/css/pages/',
-        js: './dist/js/',
+        mainJs: './dist/js/',
+        pagesJs: './dist/js/pages/',
         img: './dist/img/',
         fonts: './dist/fonts/',
     },
@@ -105,29 +107,55 @@ const buildCSS = () => {
 };
 
 const buildJS = () => {
-    return gulp
-        .src(path.src.js)
-        .pipe(plumber())
-        .pipe(
-            babel({
-                presets: [
-                    [
-                        '@babel/preset-env',
-                        {
-                            "targets": "> 0.25%, not dead"
-                        }
-                    ]
-                ],
-                plugins: [
-                    [
-                        '@babel/plugin-transform-arrow-functions'
+    return mergeStream(
+        gulp
+            .src(path.src.mainJs)
+            .pipe(plumber())
+            .pipe(
+                babel({
+                    presets: [
+                        [
+                            '@babel/preset-env',
+                            {
+                                "targets": "> 0.25%, not dead"
+                            }
+                        ]
                     ],
-                ]
-            })
-        )
-        .pipe(uglify())
-        .pipe(concat('script.min.js'))
-        .pipe(gulp.dest(path.dist.js));
+                    plugins: [
+                        [
+                            '@babel/plugin-transform-arrow-functions'
+                        ],
+                    ]
+                })
+            )
+            .pipe(uglify())
+            .pipe(concat('script.min.js'))
+            .pipe(gulp.dest(path.dist.mainJs)),
+
+        gulp
+            .src(path.src.pagesJs)
+            .pipe(plumber())
+            .pipe(
+                babel({
+                    presets: [
+                        [
+                            '@babel/preset-env',
+                            {
+                                "targets": "> 0.25%, not dead"
+                            }
+                        ]
+                    ],
+                    plugins: [
+                        [
+                            '@babel/plugin-transform-arrow-functions'
+                        ],
+                    ]
+                })
+            )
+            .pipe(uglify())
+            .pipe(rename({suffix: '.min'}))
+            .pipe(gulp.dest(path.dist.pagesJs))
+    );
 };
 
 const buildImages = () => {

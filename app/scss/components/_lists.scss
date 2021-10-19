@@ -28,50 +28,28 @@
         .list__item {
             counter-increment: li;
             position: relative;
-            padding-left: 200px;
+
+            &:before {
+                content: counter(li) '.';
+            }
+        }
+    }
+
+    &--type_big_numbers {
+        counter-reset: li;
+
+        .list__item {
+            counter-increment: li;
+            position: relative;
 
             &:before {
                 content: '0' counter(li);
-                font-weight: 700;
                 position: absolute;
                 top: 0;
                 left: 0;
-                font-size: 110px;
-                line-height: 110px;
+                font-size: 30px;
+                line-height: 35px;
                 font-weight: 100;
-                color: rgba($main_color, 0.7);
-            }
-        }
-
-        @include max-width($desktop_medium) {
-
-            .list__item {
-                padding-left: 140px;
-            }
-
-            .list__item:before {
-                font-size: 80px;
-                line-height: 80px;
-            }
-        }
-
-        @include max-width($tablet) {
-
-            .list__item:before {
-                font-size: 70px;
-                line-height: 70px;
-            }
-        }
-
-        @include max-width($phone) {
-
-            .list__item {
-                padding-left: 100px;
-            }
-
-            .list__item:before {
-                font-size: 55px;
-                line-height: 55px;
             }
         }
     }

@@ -1,0 +1,122 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+.our_collaboration {
+    padding: 10vw 0 8.5vw;
+
+    .h1 {
+        max-width: 750px;
+        font-weight: 100;
+        margin-bottom: 6.25vw;
+    }
+
+    .list {
+        max-width: 650px;
+        margin-left: 53px;
+
+        &__item {
+            padding-bottom: 5.2vw;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 42px;
+                left: -41.5px;
+                width: 1px;
+                height: calc(100% - 50px);
+                border-left: 1px dashed $main_color;
+            }
+        }
+
+        &__item:last-child:after {
+            display: none;
+        }
+
+        &__item h2 {
+            position: relative;
+            font-size: 30px;
+            line-height: 35px;
+            font-weight: 100;
+            letter-spacing: 0.05em;
+            padding-left: 45px;
+            margin-bottom: 1.5vw;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -53px;
+                width: 23px;
+                height: 23px;
+                background: url('../../img/icons/list_item_rounded.svg') no-repeat center / contain;
+            }
+        }
+
+        &__item p {
+            margin-bottom: 1vw;
+        }
+
+        &__item .subheading {
+            position: relative;
+            display: inline-block;
+            margin-top: 0.5vw;
+
+            &.has_tooltip {
+                cursor: pointer;
+                padding-right: 32px;
+            }
+
+            &.has_tooltip:before {
+                content: '';
+                position: absolute;
+                bottom: 20px;
+                right: 0;
+                width: 27px;
+                height: 27px;
+                background: #FFFFFF url('../../img/icons/question.svg') no-repeat center / auto;
+                border-radius: 50%;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
+
+.payment_and_documents {
+    
+    .inner_wrapper {
+        background-color: #FFFFFF;
+        padding: 3.6vw 3.1vw 4vw;
+
+        h2 {
+            margin-bottom: 2vw;
+        }
+
+        .subheading {
+            margin: 3.6vw 0 1.6vw;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+
+            li {
+                width: 50%;
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 25px;
+            }
+
+            a {
+                text-transform: uppercase;
+                display: inline-flex;
+                align-items: center;
+            }
+
+            svg {
+                margin-right: 18px;
+            }
+        }
+    }
+}

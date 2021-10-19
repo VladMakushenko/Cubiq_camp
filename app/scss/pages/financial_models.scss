@@ -1,0 +1,103 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+.intro_section {
+
+    .robust_economy_projects {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &__text {
+            margin-right: 3.6vw;
+    
+            .h1 {
+                max-width: 400px;
+                margin-bottom: 5.25vw;
+            }
+
+            .annual_profit,
+            .payback {
+                font-size: 20px;
+                line-height: 31px;
+
+                span {
+                    display: inline-block;
+                    font-size: 65px;
+                    line-height: 75px;
+                    margin: 0 5px 5px 0;
+                }
+            }
+
+            .annual_profit {
+                margin-bottom: 2.8vw;
+            }
+        }
+
+        &__pictures {
+            height: 100vh;
+            width: 50vw;
+            flex-shrink: 0;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: calc(100% / 3);
+            }
+
+            img:not(:last-child) {
+                padding-bottom: 7px;
+            }
+        }
+    }
+}
+
+.our_economist {
+    padding: 10.5vw 0 12.5vw;
+
+    .flex_container {
+
+        &__item--picture {
+            flex-shrink: 0;
+            margin-right: 4.5vw;
+        }
+
+        &__item--text {
+            max-width: 700px;
+
+            small {
+                display: block;
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+
+        &__item--text > *:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            position: relative;
+            font-weight: 400;
+            padding-left: 45px;
+            
+            svg {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+            }
+        }
+    }
+}
+
+.infrastructure {
+    padding-bottom: 8vw;
+
+    h2 {
+        margin-bottom: 4vw;
+    }
+}

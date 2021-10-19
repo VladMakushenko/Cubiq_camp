@@ -1,6 +1,24 @@
 .link {
     position: relative;
 
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: $main_color;
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+    }
+
+    &:hover:after,
+    &:hover:after {
+        opacity: 1;
+        width: 100%;
+    }
+
     &--go_to {
         color: $button_color;
         padding-right: 40px;
@@ -17,7 +35,12 @@
 
         &:hover:before,
         &:focus:before {
-            animation: linkTranslate 250ms ease-in-out;
+            // animation: linkTranslate 250ms ease-in-out;
+        }
+
+        &:hover:after,
+        &:hover:after {
+            width: calc(100% - 40px);
         }
     }
 }
