@@ -498,11 +498,11 @@
     .calculation_list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 5.2vw;
+        grid-gap: 5vw 2.5vw;
         margin-bottom: 6.2vw;
 
         &__item {
-            @include fluid-text($tablet_wide, $desktop, 22px, 33px, 32px, 50px);
+            @include fluid-text($tablet_wide, $desktop, 18px, 33px, 28px, 50px);
             font-weight: 100;
             opacity: 0.8;
         }
@@ -512,7 +512,7 @@
         }
 
         &__item span {
-            @include fluid-text($tablet_wide, $desktop, 45px, 70px, 45px, 50px);
+            @include fluid-text($tablet_wide, $desktop, 40px, 70px, 40px, 50px);
             font-weight: 300;
         }
     }
