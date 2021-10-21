@@ -59,7 +59,7 @@
     }
 
     @include max-width($tablet_wide) {
-        margin-top: 6vw;
+        margin-top: 4.2vw;
 
         &__phone {
             @include fluid-text($phone_small, $tablet, 15px, 25px, 15px, 25px);

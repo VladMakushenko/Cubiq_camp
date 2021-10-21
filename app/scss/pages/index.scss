@@ -159,13 +159,13 @@
 }
 
 .hi_tech_modules {
-    padding: 5.2vw 0;
+    padding: 4.5vw 0;
 
     h2 {
         @include fluid-text($tablet_wide, $desktop, 24px, 40px, 34px, 55px);
         display: flex;
         align-items: center;
-        margin-bottom: 5.2vw;
+        margin-bottom: 5vw;
     }
 
     h2 > span:first-child {
@@ -178,19 +178,19 @@
         width: 95%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 5.2vw;
+        grid-gap: 5vw 2vw;
 
         &__item {
             letter-spacing: 0.02em;
             text-transform: uppercase;
 
             .h3 {
-                @include fluid-text($tablet_wide, $desktop, 16px, 22px, 22px, 32px);
+                @include fluid-text($tablet_wide, $desktop, 15px, 22px, 22px, 32px);
                 margin-bottom: 20px;
             }
 
             li {
-                @include fluid-text($tablet_wide, $desktop, 16px, 18px, 34px, 37px);
+                @include fluid-text($tablet_wide, $desktop, 14px, 18px, 34px, 37px);
             }
 
             li:not(:last-child) {
@@ -209,8 +209,14 @@
     }
 
     @include max-width($desktop_medium) {
+        padding: 3.5vw 0;
+
+        h2 {
+            margin-bottom: 3vw;
+        }
+
         .modules_list {
-            grid-gap: 3.8vw;
+            grid-gap: 2vw;
         }
     }
 

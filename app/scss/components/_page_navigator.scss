@@ -6,11 +6,12 @@
     max-width: calc(100vh - 70px - 6.48vh);
     position: fixed;
     top: 6.48vh;
-    left: 3.125vw;
+    left: 3.5vw;
     transform: rotate(-90deg) translateX(-100%);
     transform-origin: top left;
-    padding-right: 5.55vh;
+    padding-right: 3.2vw;
     z-index: 99;
+    min-width: 450px;
     
     &--inverted {
         // filter: invert(1);
@@ -81,7 +82,7 @@
         }
     }
 
-    @include max-width($tablet) {
+    @include max-width(812px) {
         display: none;
     }
 }

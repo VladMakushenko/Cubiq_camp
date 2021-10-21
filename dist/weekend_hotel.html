@@ -8,6 +8,8 @@
     <meta name="description" content="Сборно-разборные здания: проектирование и производство">
     <meta name="keywords" content="">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="../dist/css/style.min.css">
     <link rel="stylesheet" href="../dist/css/pages/formats_similar_pages.min.css">
 </head>
@@ -130,10 +132,10 @@
             <div class="wrapper">
                 <h2 class="h2 h2--uppercase">Участок и коммуникации</h2>
 
-                <div class="flex_container flex_container--centered">
+                <div class="flex_container">
                     <picture class="flex_container__item flex_container__item--picture">
-                        <!-- <source media="(max-width: 500px)" srcset="./img/formats/weekend_hotel_page/land_plot--phone.jpg"> -->
-                        <!-- <source media="(max-width: 768px)" srcset="./img/formats/weekend_hotel_page/land_plot--tablet.jpg"> -->
+                        <source media="(max-width: 500px)" srcset="./img/formats/weekend_hotel_page/land_plot--phone.jpg">
+                        <source media="(max-width: 768px)" srcset="./img/formats/weekend_hotel_page/land_plot--tablet.jpg">
                         <img src="./img/formats/weekend_hotel_page/land_plot.jpg" alt="Отель выходного дня — участок" title="Отель выходного дня — участок">
                     </picture>
                     <div class="flex_container__item flex_container__item--text">
@@ -198,7 +200,7 @@
 
                     <li>
                         <p><span class="number">5</span> %</p>
-                        <p>доставка и сборка</p>
+                        <p>доставка<br> и сборка</p>
                     </li>
 
                     <li class="vertical_align">
@@ -222,13 +224,11 @@
 
                 <div class="investment_pictures">
                     <picture class="flex_container__item flex_container__item--picture">
-                        <!-- <source media="(max-width: 500px)" srcset="./img/formats/weekend_hotel_page/investment_01--phone.jpg"> -->
-                        <!-- <source media="(max-width: 768px)" srcset="./img/formats/weekend_hotel_page/investment_01--tablet.jpg"> -->
+                        <source media="(max-width: 500px)" srcset="./img/formats/weekend_hotel_page/investment_01--phone.jpg">
+                        <source media="(max-width: 1024px)" srcset="./img/formats/weekend_hotel_page/investment_01--tablet.jpg">
                         <img src="./img/formats/weekend_hotel_page/investment_01.jpg" alt="" title="">
                     </picture>
                     <picture class="flex_container__item flex_container__item--picture">
-                        <!-- <source media="(max-width: 500px)" srcset="./img/formats/weekend_hotel_page/investment_02--phone.jpg"> -->
-                        <!-- <source media="(max-width: 768px)" srcset="./img/formats/weekend_hotel_page/investment_02--tablet.jpg"> -->
                         <img src="./img/formats/weekend_hotel_page/investment_02.jpg" alt="" title="">
                     </picture>
                 </div>
@@ -278,7 +278,214 @@
             </div>
         </article>
 
-        
+        <article class="profitability" data-theme="gray">
+            <div class="wrapper">
+                <div class="inner_wrapper flex_container">
+                    <div class="flex_container__item">
+                        <h2 class="h2--uppercase">Доходы и расходы за 5 лет</h2>
+                        <p>при покупке в рассрочку</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>1 год</th>
+                                    <th>2 год</th>
+                                    <th>3 год</th>
+                                    <th>4 год</th>
+                                    <th>5 год</th>
+                                    <th>итог</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>расходы</td>
+                                    <td>23</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>35</td>
+                                </tr>
+                                <tr>
+                                    <td>доходы</td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>75</td>
+                                </tr>
+                                <tr>
+                                    <td>прибыль</td>
+                                    <td>-8</td>
+                                    <td>12</td>
+                                    <td>12</td>
+                                    <td>12</td>
+                                    <td>12</td>
+                                    <td>40</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="conditions">
+                            <p>Условия рассрочки:</p>
+                            
+                            <ul class="list list--type_arrows">
+                                <li class="list__item">первоначальный взнос – 50% за модули</li>
+                                <li class="list__item">100% оплата доставки и сборки </li>
+                                <li class="list__item">оплата ежемесячных взносов в течение 1 года</li>
+                            </ul>
+                        </div>
+
+                        <a href="/" download class="download_pdf">
+                            <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.29167 9.4585L5.75 8.00016L8.45833 10.7085L8.45833 0.0834965L10.5417 0.0834965L10.5417 10.7085L13.25 8.00016L14.7083 9.4585L9.5 14.6668L4.29167 9.4585ZM16.7917 18.8335L16.7917 10.5002L18.875 10.5002L18.875 18.8335C18.875 19.9793 17.9375 20.9168 16.7917 20.9168L2.20833 20.9168C1.0625 20.9168 0.124999 19.9793 0.124999 18.8335L0.125 10.5002L2.20833 10.5002L2.20833 18.8335L16.7917 18.8335Z" fill="#0B7495" fill-opacity="0.9"/>
+                            </svg>
+                            <p>Скачать презентацию pdf</p>
+                        </a>
+                    </div>
+
+                    <div class="flex_container__item">
+                        <h2 class="h2--uppercase">Динамика прибыли</h2>
+
+                        <img src="./img/formats/charts/weekend_hotel.svg" alt="Динамика прибыли">
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="other_formats" data-theme="gray">
+            <div class="wrapper">
+                <h2 class="h2 h2--uppercase">Другие форматы</h2>
+
+                <div class="formats_slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide--is_active">
+                            <a class="swiper-slide__link" href="/">
+                                <figure>
+                                    <picture class="swiper-slide__picture">
+                                        <source media="(max-width: 500px)" srcset="./img/formats/slider/camping--phone.jpg">
+                                        <!-- <source media="(max-width: 1024px)" srcset="./img/formats/slider/camping--tablet.jpg"> -->
+                                        <img src="./img/formats/slider/camping.jpg" alt="Охотничий или рыболовный кемпинг" title="Охотничий или рыболовный кемпинг">
+                                    </picture>
+                                    <figcaption class="swiper-slide__name">
+                                        <h3 class="swiper-slide__title subheading">Охотничий или<br> рыболовный кемпинг</h3>
+                                        <span class="swiper-slide__line"></span>
+                                        <p class="swiper-slide__description">благоустроенный кемпинг для любителей рыбной ловли или охоты</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a class="swiper-slide__link" href="/">
+                                <figure>
+                                    <picture class="swiper-slide__picture">
+                                        <source media="(max-width: 500px)" srcset="./img/formats/slider/ski_resort--phone.jpg">
+                                        <!-- <source media="(max-width: 1024px)" srcset="./img/formats/slider/ski_resort--tablet.jpg"> -->
+                                        <img src="./img/formats/slider/ski_resort.jpg" alt="Горнолыжная деревня" title="Горнолыжная деревня">
+                                    </picture>
+                                    <figcaption class="swiper-slide__name">
+                                        <h3 class="swiper-slide__title subheading">Горнолыжная деревня</h3>
+                                        <span class="swiper-slide__line"></span>
+                                        <p class="swiper-slide__description">курорт для любителей гор, зимнего туризма или активного отдыха – альпинизма, сноуборда, горных лыж</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a class="swiper-slide__link" href="/">
+                                <figure>
+                                    <picture class="swiper-slide__picture">
+                                        <source media="(max-width: 500px)" srcset="./img/formats/slider/relax_complex--phone.jpg">
+                                        <!-- <source media="(max-width: 1024px)" srcset="./img/formats/slider/relax_complex--tablet.jpg"> -->
+                                        <img src="./img/formats/slider/relax_complex.jpg" alt="Пляжный Relax комплекс" title="Пляжный Relax комплекс">
+                                    </picture>
+                                    <figcaption class="swiper-slide__name">
+                                        <h3 class="swiper-slide__title subheading">Пляжный Relax<br> комплекс</h3>
+                                        <span class="swiper-slide__line"></span>
+                                        <p class="swiper-slide__description">SPA-комплекс для длительного отдыха на берегу водоема – озера, моря, океана</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a class="swiper-slide__link" href="/">
+                                <figure>
+                                    <picture class="swiper-slide__picture">
+                                        <source media="(max-width: 500px)" srcset="./img/formats/slider/holiday_resort--phone.jpg">
+                                        <source media="(max-width: 1024px)" srcset="./img/formats/slider/holiday_resort--tablet.jpg">
+                                        <img src="./img/formats/slider/holiday_resort.jpg" alt="База активного отдыха" title="База активного отдыха">
+                                    </picture>
+                                    <figcaption class="swiper-slide__name">
+                                        <h3 class="swiper-slide__title subheading">База активного<br> отдыха</h3>
+                                        <span class="swiper-slide__line"></span>
+                                        <p class="swiper-slide__description">комплекс в&nbsp;живописном месте для активного времяпрепровождения</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a class="swiper-slide__link" href="/">
+                                <figure>
+                                    <picture class="swiper-slide__picture">
+                                        <source media="(max-width: 500px)" srcset="./img/formats/slider/residence--phone.jpg">
+                                        <source media="(max-width: 1024px)" srcset="./img/formats/slider/residence--tablet.jpg">
+                                        <img src="./img/formats/slider/residence.jpg" alt="Резиденция для мероприятий" title="Резиденция для мероприятий">
+                                    </picture>
+                                    <figcaption class="swiper-slide__name">
+                                        <h3 class="swiper-slide__title subheading">Резиденция<br> для мероприятий</h3>
+                                        <span class="swiper-slide__line"></span>
+                                        <p class="swiper-slide__description">для частных и&nbsp;корпоративных клиентов: банкеты, свадьбы, бизнес-события, конференции</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a class="swiper-slide__link" href="/">
+                                <figure>
+                                    <picture class="swiper-slide__picture">
+                                        <source media="(max-width: 500px)" srcset="./img/formats/slider/luxury_hotel--phone.jpg">
+                                        <source media="(max-width: 1024px)" srcset="./img/formats/slider/luxury_hotel--tablet.jpg">
+                                        <img src="./img/formats/slider/luxury_hotel.jpg" alt="Luxury отель" title="Luxury отель">
+                                    </picture>
+                                    <figcaption class="swiper-slide__name">
+                                        <h3 class="swiper-slide__title subheading">Luxury отель</h3>
+                                        <span class="swiper-slide__line"></span>
+                                        <p class="swiper-slide__description">пятизвездочный комплекс для длительного отдыха в&nbsp;красивом месте</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a class="swiper-slide__link" href="/">
+                                <figure>
+                                    <picture class="swiper-slide__picture">
+                                        <source media="(max-width: 500px)" srcset="./img/formats/slider/boarding_house--phone.jpg">
+                                        <source media="(max-width: 1024px)" srcset="./img/formats/slider/boarding_house--tablet.jpg">
+                                        <img src="./img/formats/slider/boarding_house.jpg" alt="Санаторно-оздоровительный центр" title="Санаторно-оздоровительный центр">
+                                    </picture>
+                                    <figcaption class="swiper-slide__name">
+                                        <h3 class="swiper-slide__title subheading">Санаторно-<br>оздоровительный центр</h3>
+                                        <span class="swiper-slide__line"></span>
+                                        <p class="swiper-slide__description">пансионат, санаторий, профилакторий с&nbsp;оказанием лечебных процедур</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </article>
     </main>
 
     
@@ -451,6 +658,9 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script src="../dist/js/script.min.js"></script>
     <script src="../dist/js/pages/weekend_hotel.min.js"></script>
 </body>
 </html>

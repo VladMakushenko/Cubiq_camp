@@ -11,24 +11,28 @@
         justify-content: space-between;
         align-items: center;
 
-        .h1--tablet_wide {
-            display: none;
-        }
-
         .h1 {
-            max-width: 400px;
+            max-width: 300px;
             margin-bottom: 5.25vw;
+
+            br {
+                display: none;
+            }
         }
 
-        .annual_profit,
-        .payback {
+        .profitability__item {
             @include fluid-text($phone, $desktop, 15px, 20px, 22px, 31px);
+            margin-right: 10px;
             margin-bottom: 2.75vw;
 
             span {
                 display: inline-block;
                 @include fluid-text($tablet, $desktop, 35px, 65px, 55px, 75px);
                 margin: 0 5px 5px 0;
+            }
+
+            br {
+                display: none;
             }
         }
 
@@ -59,27 +63,17 @@
         padding: 21vw 0 0;
 
         .our_projects {
-            flex-direction: column-reverse;
+            flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
             height: auto;
-
-            .h1 {
-                display: none;
-            }
-    
-            .h1--tablet_wide {
-                display: block;
-                max-width: none;
-                margin-bottom: 50px;
-            }
 
             &__pictures {
                 height: auto;
                 width: 100%;
 
                 picture {
-                    height: auto;
+                    height: 377px;
 
                     &:last-child {
                         display: none;
@@ -87,15 +81,26 @@
                 }
             }
 
-            &__text {
-                width: 50%;
-                display: flex;
-                justify-content: space-between;
-                margin-top: 40px;
+            .h1 {
+                max-width: 100%;
+                margin-bottom: 8vw;
+
+                br {
+                    display: initial;
+                }
             }
 
-            .annual_profit,
-            .payback {
+            &__text {
+                width: 65%;
+                margin-bottom: 8vw;
+            }
+
+            .profitability {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .profitability__item {
                 @include fluid-text($tablet, $tablet_wide, 16px, 18px, 25px, 31px);
                 margin-bottom: 0;
     
@@ -107,49 +112,68 @@
     }
 
     @include max-width($tablet) {
-        padding: 26vw 0 0;
-
         .our_projects {
 
-            .h1--tablet_wide {
-                margin-bottom: 7vw;
-                margin-left: 7vw;
+            &__pictures {
+
+                picture {
+                    height: 286px;
+                }
+            }
+
+            .h1 {
+                margin-bottom: 6vw;
             }
     
             &__text {
-                width: 75%;
-                margin: 50px 50px 0;
+                margin: 0 50px 50px;
             }
 
-            .annual_profit,
-            .payback {
+            .profitability__item {
                 @include fluid-text($phone, $tablet, 15px, 18px, 22px, 31px);
     
                 span {
-                    @include fluid-text($phone, $tablet, 35px, 60px, 75px, 75px);
+                    @include fluid-text($phone, $tablet, 32px, 45px, 42px, 55px);
                 }
             }
         }
     }
 
     @include max-width($phone) {
-        padding: 40vw 0 0;
+        padding: 23vw 0 0;
 
         .our_projects {
 
-            .h1--tablet_wide {
-                max-width: 300px;
+            &__pictures {
+
+                picture {
+                    height: 224px;
+                }
+            }
+
+            .h1 {
+                margin-bottom: 10vw;
+
+                br {
+                    display: none;
+                }
+            }
+
+            .profitability__item {
+
+                br {
+                    display: initial;
+                }
             }
 
             &__text {
-                width: 100%;
-                margin: 30px 0 0;
-                padding: 0 25px;;
-            }
+                width: 90%;
+                margin: 0;
+                padding: 0 25px 35px;
 
-            .annual_profit p:last-child,
-            .payback p:last-child {
-                max-width: 75%;
+                p:first-child {
+                    white-space: nowrap;
+                }
             }
         }
     }
@@ -159,10 +183,19 @@
     padding: 10.5vw 0 12.5vw;
 
     .flex_container {
+        padding-right: 20px;
 
         &__item--picture {
-            flex-shrink: 0;
+            min-width: 400px;
+            max-width: 100%;
             margin-right: 4.5vw;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top center;
+            }
         }
 
         &__item--text {
@@ -173,9 +206,12 @@
             margin-bottom: 15px;
         }
 
-        h2 {
-            @include fluid-text($tablet_wide, $desktop, 35px, 40px, 48px, 52px);
+        h2 {  
             font-weight: 100;
+        }
+
+        p {
+            @include fluid-text($tablet_wide, $desktop, 16px, 20px, 26px, 37px);
         }
 
         small {
@@ -197,6 +233,7 @@
                 font-weight: 400;
                 padding-left: 45px;
                 margin-bottom: 20px;
+                white-space: nowrap;
             }
 
             &__item svg {
@@ -210,36 +247,55 @@
     }
 
     @include max-width($tablet_wide) {
-        padding: 12vw 0;
+        padding: 9.5vw 0 16vw;
 
         .flex_container {
+            padding-right: 0;
 
             &__item--picture {
                 margin-right: 0;
+                width: 514px;
+                height: 516px;
             }
 
             h2 {
                 @include fluid-text($phone, $tablet_wide, 25px, 35px, 34px, 48px);
                 margin-top: 30px;
             }
+
+            p {
+                @include fluid-text($phone, $tablet_wide, 16px, 20px, 30px, 37px);
+            }
     
             &__item--text > *:not(:last-child) {
                 margin-bottom: 15px;
             }
-    
+
             .icons {
                 flex-direction: row;
 
                 &__item:not(:last-child) {
-                    margin-right: 10vw;
+                    margin-right: 8vw;
                 }
+            }
+        }
+    }
+
+    @include max-width($tablet) {
+        padding: 6vw 0 11vw;
+
+        .flex_container {
+
+            &__item--picture {
+                min-width: unset;
+                width: 496px;
+                height: 411px;
             }
         }
     }
 
     @include max-width(700px) {
         .flex_container {
-    
             .icons {
                 flex-direction: column;
 
@@ -251,16 +307,13 @@
     }
 
     @include max-width($phone) {
-        padding: 18vw 0;
-
-        .wrapper {
-            padding: 0;
-        }
+        padding: 15vw 0 30vw;
 
         .flex_container {
 
-            &__item--text {
-                padding: 0 25px;
+            &__item--picture {
+                width: 100%;
+                height: 85vw;
             }
 
             .icons {
@@ -312,20 +365,21 @@
             }
 
             .swiper-slide__line {
-                display: block !important;
-                opacity: 1 !important;
-                margin: 0 60px 0;
+                display: none !important;
             }
 
             .swiper-slide__description {
                 font-size: 16px;
                 line-height: 26px;
-                text-align: left;
             }
         }
     }
 
     @include max-width($tablet) {
+        h2 {
+            max-width: 100%;
+        }
+    
         .formats_slider {
 
             .swiper-slide__picture {
@@ -335,10 +389,6 @@
             .swiper-slide__name {
                 margin-left: 0;
                 margin-right: 0;
-            }
-    
-            .swiper-slide__line {
-                display: none !important;
             }
 
             .swiper-slide__description {

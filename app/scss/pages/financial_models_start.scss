@@ -1,0 +1,563 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+.page_navigator {
+    @include max-width($tablet_wide) {
+        top: 6vw;
+        left: 6vw;
+    }
+}
+
+.intro_section {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+
+    &__picture {
+        width: calc(100vw - 10vw);
+        height: calc(100vh - 8vw);
+        max-width: 100%;
+        margin-left: auto;
+        background: url('../../img/financial_models_page/START/intro.jpg') no-repeat 0 center / cover;
+    
+        @include set-2x-image {
+            background-image: url('../../img/financial_models_page/START/intro@2x.jpg');
+        }
+    }
+
+    &__text {
+        height: 8vw;
+        display: flex;
+        align-items: center;
+
+        .h1 {
+            font-weight: 400;
+            margin-right: 4.5vw;
+            margin-top: -25px;
+        }
+
+        p {
+            @include fluid-text($tablet_wide, $desktop, 18px, 30px, 28px, 44px);
+            font-weight: 100;
+        }
+    }
+
+    @include max-width($tablet_wide) {
+        height: auto;
+
+        &__picture {
+            background-image: url('../../img/financial_models_page/START/intro--tablet.jpg');
+            width: calc(100vw - 17.5vw);
+            height: 550px;
+        }
+
+        &__text {
+            height: auto;
+            margin-top: 25px;
+    
+            p {
+                @include fluid-text($tablet, $tablet_wide, 20px, 25px, 32px, 37px);
+            }
+        }
+    }
+
+    @include max-width($tablet) {
+        &__picture {
+            width: 100vw;
+            height: 500px;
+        }
+    }
+
+    @include max-width($phone) {
+        &__picture {
+            background-image: url('../../img/financial_models_page/START/intro--phone.jpg');
+            height: 632px;
+        }
+
+        &__text {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .h1 {
+                font-size: 30px;
+                line-height: 41px;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.model_features {
+    padding: 8vw 0 10vw;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        > * {
+            width: 50%;
+        }
+    }
+
+    .features {
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 4vw;
+        }
+
+        li {
+            position: relative;
+            @include fluid-text($tablet_wide, $desktop, 15px, 18px, 22px, 30px);
+        }
+
+        li svg {
+            width: 7.5vw;
+            height: 7.5vw;
+            max-width: 140px;
+            max-height: 140px;
+        }
+
+        .subheading {
+            margin: 10px 0;
+        }
+
+        em {
+            font-style: normal;
+            font-weight: 300;
+        }
+    }
+
+    .presentation {
+        background-color: #FFFFFF;
+        padding: 4.2vw;
+        margin-left: 5vw;
+
+        li {
+            @include fluid-text($tablet_wide, $desktop, 15px, 20px, 22px, 32px);
+            display: flex;
+        }
+
+        li:not(:last-child) {
+            margin-bottom: 2vw;
+        }
+
+        li svg {
+            flex-shrink: 0;
+            margin-right: 25px;
+        }
+
+        .button {
+            align-items: center;
+            padding: 20px 2.5vw;
+            margin-top: 2vw;
+
+            svg {
+                width: 22px;
+                height: 22px;
+                margin-right: 22px;
+            }
+        }
+    }
+
+    @include max-width($tablet_wide) {
+        padding: 10vw 0;
+
+        .wrapper {
+            padding-right: 0;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            > * {
+                width: 100%;
+            }
+        }
+
+        .features {
+
+            ul {
+                width: 80%;
+                grid-gap: 6vw;
+            }
+    
+            li {
+                @include fluid-text($tablet, $tablet_wide, 16px, 18px, 26px, 30px);
+            }
+    
+            li svg {
+                width: 100px;
+                height: 100px;
+            }
+
+            .subheading {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+
+        .presentation {
+            padding: 6vw 10vw;
+            margin-left: 0;
+            margin-top: 14vw;
+
+            li {
+                @include fluid-text($phone, $tablet_wide, 16px, 18px, 28px, 32px);
+            }
+    
+            li:not(:last-child) {
+                margin-bottom: 3vw;
+            }
+
+            li svg {
+                max-width: 28px;
+            }
+    
+            .button {
+                font-size: 20px;
+                padding: 20px 5vw;
+                margin-top: 3vw;
+            }
+        }
+    }
+
+    @include max-width($tablet) {
+        .wrapper {
+            padding: 0;
+        }
+
+        .features {
+            padding: 0 6.5vw;
+
+            ul {
+                width: 100%;
+                grid-gap: 7vw;
+            }
+    
+            li {
+                @include fluid-text($phone, $tablet, 18px, 16px, 30px, 26px);
+                padding-left: 75px;
+            }
+    
+            li svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 60px;
+                height: 60px;
+            }
+
+            li p {
+                margin-top: 25px;
+                margin-left: -75px;
+            }
+
+            .subheading {
+                margin: 0;
+                margin-top: 18px;
+            }
+        }
+
+        .presentation {
+            padding: 6.5vw;
+            margin-top: 8vw;
+
+            li:not(:last-child) {
+                margin-bottom: 4vw;
+            }
+    
+            .button {
+                @include fluid-text($phone, $tablet, 16px, 18px, 16px, 18px);
+                margin-top: 4vw;
+            }
+        }
+    }
+
+    @include max-width(600px) {
+        .features {
+
+            ul {
+                grid-template-columns: 1fr;
+                grid-gap: 10vw;
+            }
+        }
+
+        .presentation {
+            padding: 12vw 6.5vw;
+            margin-top: 25vw;
+
+            strong {
+                font-weight: 300;
+            }
+
+            li:not(:last-child) {
+                margin-bottom: 8vw;
+            }
+    
+            .button {
+                margin-top: 8vw;
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+}
+
+.profitability {
+    padding: 0 0 10vw;
+
+    .flex_container {
+        justify-content: space-between;
+
+        &__item--text {
+            flex: 0 1 40%;
+            margin-right: 5vw;
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 3vw 2vw;
+
+                .slash {
+                    font-size: 25px;
+                }
+
+                p {
+                    @include fluid-text($tablet_wide, $desktop, 15px, 20px, 25px, 30px);
+                }
+
+                .number {
+                    @include fluid-text($tablet_wide, $desktop, 35px, 65px, 45px, 75px);
+                }
+            }
+
+            small {
+                display: inline-block;
+                @include fluid-text($tablet_wide, $desktop, 13px, 16px, 23px, 26px);
+                max-width: 80%;
+                margin-top: 4vw;
+            }
+        }
+
+        &__item--picture {
+            width: 918px;
+            max-width: 55%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @include max-width($tablet_wide) {
+        .wrapper {
+            padding: 0;
+        }
+
+        .flex_container {
+    
+            &__item--text {
+                flex: auto;
+                margin-right: 0;
+                padding-left: 17.5vw;
+                padding-right: 6.5vw;
+    
+                ul {
+                    grid-gap: 8vw;
+    
+                    p {
+                        @include fluid-text($tablet, $tablet_wide, 20px, 20px, 30px, 30px);
+                    }
+    
+                    .number {
+                        @include fluid-text($tablet, $tablet_wide, 60px, 65px, 70px, 75px);
+                    }
+                }
+    
+                small {
+                    @include fluid-text($tablet, $tablet_wide, 15px, 16px, 22px, 26px);
+                    max-width: 100%;
+                    margin: 8vw 0 6vw;
+                }
+            }
+    
+            &__item--picture {
+                width: 100%;
+                max-width: 100%;
+                height: 62vw;
+            }
+        }
+    }
+
+    @include max-width($tablet) {
+        padding: 0 0 8vw;
+
+        .flex_container {
+    
+            &__item--text {
+                padding: 0 6.5vw;
+
+                ul {
+                    grid-gap: 10vw;
+
+                    li:nth-child(even) {
+                        justify-self: flex-end;
+                    }
+    
+                    p {
+                        @include fluid-text($phone, $tablet, 18px, 20px, 28px, 30px);
+                    }
+    
+                    .number {
+                        @include fluid-text($phone, $tablet, 50px, 60px, 65px, 70px);
+                    }
+                }
+    
+                small {
+                    margin: 8vw 0;
+                }
+            }
+        }
+    }
+
+    @include max-width($phone) {
+        padding: 0 0 14vw;
+
+        .flex_container {
+    
+            &__item--text {
+                padding: 0 6.5vw;
+
+                ul {
+                    grid-template-columns: 1fr;
+                    grid-gap: 7vw;
+
+                    li:nth-child(even) {
+                        justify-self: flex-start;
+                    }
+    
+                    p {
+                        @include fluid-text($phone, $tablet, 18px, 20px, 28px, 30px);
+                    }
+    
+                    .number {
+                        @include fluid-text($phone, $tablet, 50px, 60px, 65px, 70px);
+                    }
+                }
+    
+                small {
+                    margin: 14vw 0;
+                }
+            }
+
+            &__item--picture {
+                height: 317px;
+            }
+        }
+    }
+}
+
+.efficiency {
+
+    .h2 {
+        @include fluid-text($tablet_wide, $desktop, 30px, 40px, 45px, 55px);
+        margin-bottom: 4.5vw;
+    }
+
+    ul {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 2vw;
+
+        li {
+            @include fluid-text($tablet_wide, $desktop, 16px, 20px, 26px, 31px);
+
+            p:nth-child(3) {
+                @include fluid-text($tablet_wide, $desktop, 14px, 16px, 24px, 26px);
+            }
+
+            .number {
+                @include fluid-text($tablet_wide, $desktop, 50px, 65px, 60px, 75px);
+            }
+        }
+    }
+
+    small {
+        display: inline-block;
+        @include fluid-text($phone, $desktop, 14px, 16px, 24px, 26px);
+        margin: 2.5vw 0 4vw;
+    }
+
+    @include max-width($tablet_wide) {
+        .h2 {
+            @include fluid-text($tablet, $tablet_wide, 30px, 35px, 45px, 50px);
+            margin-bottom: 6vw;
+        }
+
+        ul {
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 6vw;
+    
+            li {
+                @include fluid-text($phone, $tablet_wide, 18px, 20px, 28px, 31px);
+    
+                p:nth-child(3) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+    
+                .number {
+                    @include fluid-text($tablet, $tablet_wide, 60px, 65px, 70px, 75px);
+                }
+            }
+        }
+
+        small {
+            margin: 5vw 0;
+        }
+    }
+
+    @include max-width($tablet) {
+        .h2 {
+            @include fluid-text($phone, $tablet, 25px, 30px, 40px, 45px);
+        }
+
+        ul li {
+            .number {
+                @include fluid-text($phone, $tablet, 50px, 60px, 60px, 70px);
+            }
+        }
+
+        small {
+            margin: 9vw 0 5vw;
+        }
+    }
+
+    @include max-width($phone) {
+        .h2 {
+            margin-bottom: 10vw;
+        }
+
+        ul {
+            grid-template-columns: 1fr;
+            grid-gap: 10vw;
+        }
+
+        small {
+            font-size: 16px;
+            line-height: 26px;
+            margin: 14vw 0;
+        }
+    }
+}

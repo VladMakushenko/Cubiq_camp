@@ -23,6 +23,10 @@
             .h1 {
                 margin-bottom: 2.5vw;
             }
+
+            p {
+                @include fluid-text($tablet_wide, $desktop, 14px, 22px, 28px, 37px);
+            }
         }
     
         &__image {
@@ -51,6 +55,10 @@
 
                 .h1 {
                     margin-bottom: 4vw;
+                }
+
+                p {
+                    @include fluid-text($phone, $tablet_wide, 16px, 18px, 28px, 32px);
                 }
             }
 

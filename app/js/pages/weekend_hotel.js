@@ -32,15 +32,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; i < lineupSwiperSlides.length; i++) {
         const item = lineupSwiperSlides[i];
-        const itemPicture = item.querySelector('.swiper-slide__picture');
+        const itemLink = item.querySelector('.swiper-slide__link');
 
-        if (itemPicture) {
-            itemPicture.addEventListener('click', () => {
+        if (itemLink) {
+            itemLink.addEventListener('click', (e) => {
+                e.preventDefault();
 
                 for (let i = 0; i < lineupSwiperSlides.length; i++) {
                     const item = lineupSwiperSlides[i];
                     item.classList.remove('swiper-slide--is_active');
-                    lineupSwiper.update();
+                    // lineupSwiper.update();
                 }
 
                 item.classList.add('swiper-slide--is_active');
