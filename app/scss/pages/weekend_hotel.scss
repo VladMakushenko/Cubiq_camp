@@ -1,0 +1,43 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+.header {
+    &__phone {
+        color: #FFFFFF;
+        font-weight: 400;
+    }
+
+    .socials_list path {
+        fill: #FFFFFF;
+    }
+
+    @include max-width($tablet_wide) {
+        &__phone {
+            color: $main_color;
+            font-weight: 300;
+        }
+    
+        .socials_list path {
+            fill: #161C23;
+        }
+    }
+}
+
+.intro_section {
+    
+    .intro_block__image {
+        background: url('../../img/formats/weekend_hotel/intro.jpg') no-repeat 0 50% / cover;
+    }
+
+    @include max-width($tablet) {
+        .intro_block__image {
+            background-image: url('../../img/formats/weekend_hotel/intro--tablet.jpg');
+        }
+    }
+
+    @include max-width($phone) {
+        .intro_block__image {
+            background-image: url('../../img/formats/weekend_hotel/intro--phone.jpg');
+        }
+    }
+}

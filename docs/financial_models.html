@@ -10,8 +10,8 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 
-    <link rel="stylesheet" href="./css/style.min.css">
-    <link rel="stylesheet" href="./css/pages/financial_models.min.css">
+    <link rel="stylesheet" href="../dist/css/style.min.css">
+    <link rel="stylesheet" href="../dist/css/pages/financial_models.min.css">
 </head>
 
 <body>
@@ -59,7 +59,9 @@
         <div class="page_navigator__content">
             <span class="page_navigator__name">Финансовые модели</span>
             <span class="page_navigator__line"></span>
-            <img class="page_navigator__logo" src="./img/cubiq_camp.svg" alt="cubiq.camp">
+            <a href="/" class="page_navigator__logo">
+                <img src="./img/cubiq_camp.svg" alt="cubiq.camp">
+            </a>
         </div>
     </div>
 
@@ -88,17 +90,17 @@
 
                     <div class="our_projects__pictures">
                         <picture>
-                            <source media="(max-width: 500px)" srcset="./img/financial_models_page/intro_01--phone.jpg">
-                            <source media="(max-width: 1024px)" srcset="./img/financial_models_page/intro_01--tablet.jpg">
-                            <img src="./img/financial_models_page/intro_01.jpg" alt="">
+                            <source media="(max-width: 500px)" srcset="./img/financial_models/intro_01--phone.jpg">
+                            <source media="(max-width: 1024px)" srcset="./img/financial_models/intro_01--tablet.jpg">
+                            <img src="./img/financial_models/intro_01.jpg" alt="">
                         </picture>
                         <picture>
-                            <source media="(max-width: 500px)" srcset="./img/financial_models_page/intro_02--phone.jpg">
-                            <source media="(max-width: 1024px)" srcset="./img/financial_models_page/intro_02--tablet.jpg">
-                            <img src="./img/financial_models_page/intro_02.jpg" alt="">
+                            <source media="(max-width: 500px)" srcset="./img/financial_models/intro_02--phone.jpg">
+                            <source media="(max-width: 1024px)" srcset="./img/financial_models/intro_02--tablet.jpg">
+                            <img src="./img/financial_models/intro_02.jpg" alt="">
                         </picture>
                         <picture>
-                            <img src="./img/financial_models_page/intro_03.jpg" alt="">
+                            <img src="./img/financial_models/intro_03.jpg" alt="">
                         </picture>
                     </div>
                 </article>
@@ -109,8 +111,8 @@
             <div class="wrapper">
                 <div class="flex_container flex_container--centered">
                     <picture class="flex_container__item flex_container__item--picture">
-                        <source media="(max-width: 500px)" srcset="./img/financial_models_page/economist--phone.jpg">
-                        <img src="./img/financial_models_page/economist.jpg" alt="Елена Корнишина — экономист ITERIUM.tech" title="Елена Корнишина — экономист ITERIUM.tech">
+                        <source media="(max-width: 500px)" srcset="./img/financial_models/economist--phone.jpg">
+                        <img src="./img/financial_models/economist.jpg" alt="Елена Корнишина — экономист ITERIUM.tech" title="Елена Корнишина — экономист ITERIUM.tech">
                     </picture>
                     <div class="flex_container__item flex_container__item--text">
                         <h2 class="h2">Елена Корнишина</h2>
@@ -160,14 +162,14 @@
                         <div class="swiper-slide swiper-slide--is_active">
                             <figure>
                                 <picture class="swiper-slide__picture">
-                                    <source media="(max-width: 500px)" srcset="./img/financial_models_page/slider/start--phone.jpg">
-                                    <source media="(max-width: 1024px)" srcset="./img/financial_models_page/slider/start--tablet.jpg">
-                                    <img src="./img/financial_models_page/slider/start.jpg" alt="START — гостеприимная база для спокойного отдыха в красивом месте недалеко от города" title="START">
+                                    <source media="(max-width: 500px)" srcset="./img/financial_models/slider/start--phone.jpg">
+                                    <source media="(max-width: 1024px)" srcset="./img/financial_models/slider/start--tablet.jpg">
+                                    <img src="./img/financial_models/slider/start.jpg" alt="START — минимальная инфраструктура для быстрого запуска" title="START">
                                 </picture>
                                 <figcaption class="swiper-slide__name">
                                     <h3 class="swiper-slide__title subheading">START</h3>
                                     <span class="swiper-slide__line"></span>
-                                    <span class="swiper-slide__description">гостеприимная база для спокойного отдыха в&nbsp;красивом месте недалеко от города</span>
+                                    <span class="swiper-slide__description">минимальная инфраструктура для быстрого запуска</span>
                                 </figcaption>
                             </figure>
                         </div>
@@ -175,14 +177,14 @@
                         <div class="swiper-slide">
                             <figure>
                                 <picture class="swiper-slide__picture">
-                                    <source media="(max-width: 500px)" srcset="./img/financial_models_page/slider/mini--phone.jpg">
-                                    <source media="(max-width: 1024px)" srcset="./img/financial_models_page/slider/mini--tablet.jpg">
-                                    <img src="./img/financial_models_page/slider/start.jpg" alt="MINI — инфраструктура для организации небольшого кемпинга или отеля на 7 номеров" title="MINI">
+                                    <source media="(max-width: 500px)" srcset="./img/financial_models/slider/mini--phone.jpg">
+                                    <source media="(max-width: 1024px)" srcset="./img/financial_models/slider/mini--tablet.jpg">
+                                    <img src="./img/financial_models/slider/mini.jpg" alt="MINI — инфраструктура для организации небольшого кемпинга или отеля на 7 номеров" title="MINI">
                                 </picture>
                                 <figcaption class="swiper-slide__name">
                                     <h3 class="swiper-slide__title subheading">MINI</h3>
                                     <span class="swiper-slide__line"></span>
-                                    <span class="swiper-slide__description">инфраструктура для организации небольшого кемпинга или отеля на 7 номеров</span>
+                                    <span class="swiper-slide__description">инфраструктура для организации небольшого кемпинга или&nbsp;отеля на 7 номеров</span>
                                 </figcaption>
                             </figure>
                         </div>
@@ -190,14 +192,14 @@
                         <div class="swiper-slide">
                             <figure>
                                 <picture class="swiper-slide__picture">
-                                    <source media="(max-width: 500px)" srcset="./img/financial_models_page/slider/midi--phone.jpg">
-                                    <source media="(max-width: 1024px)" srcset="./img/financial_models_page/slider/midi--tablet.jpg">
-                                    <img src="./img/financial_models_page/slider/start.jpg" alt="MIDI — комплекс на 10 номеров и павильон для мероприятий для участков без коммуникаций" title="MIDI">
+                                    <source media="(max-width: 500px)" srcset="./img/financial_models/slider/midi--phone.jpg">
+                                    <source media="(max-width: 1024px)" srcset="./img/financial_models/slider/midi--tablet.jpg">
+                                    <img src="./img/financial_models/slider/midi.jpg" alt="MIDI — комплекс на 10 номеров и павильон для мероприятий для участков без коммуникаций" title="MIDI">
                                 </picture>
                                 <figcaption class="swiper-slide__name">
                                     <h3 class="swiper-slide__title subheading">MIDI</h3>
                                     <span class="swiper-slide__line"></span>
-                                    <span class="swiper-slide__description">комплекс на 10 номеров и павильон для мероприятий для участков без коммуникаций</span>
+                                    <span class="swiper-slide__description">комплекс на 10 номеров и&nbsp;павильон для мероприятий для участков без коммуникаций</span>
                                 </figcaption>
                             </figure>
                         </div>
@@ -205,9 +207,9 @@
                         <div class="swiper-slide">
                             <figure>
                                 <picture class="swiper-slide__picture">
-                                    <source media="(max-width: 500px)" srcset="./img/financial_models_page/slider/maxi--phone.jpg">
-                                    <source media="(max-width: 1024px)" srcset="./img/financial_models_page/slider/maxi--tablet.jpg">
-                                    <img src="./img/financial_models_page/slider/start.jpg" alt="MAXI — полноценная инфраструктура для автономного отеля или кемпинга на 15 номеров" title="MAXI">
+                                    <source media="(max-width: 500px)" srcset="./img/financial_models/slider/maxi--phone.jpg">
+                                    <source media="(max-width: 1024px)" srcset="./img/financial_models/slider/maxi--tablet.jpg">
+                                    <img src="./img/financial_models/slider/maxi.jpg" alt="MAXI — полноценная инфраструктура для автономного отеля или кемпинга на 15 номеров" title="MAXI">
                                 </picture>
                                 <figcaption class="swiper-slide__name">
                                     <h3 class="swiper-slide__title subheading">MAXI</h3>
@@ -401,7 +403,7 @@
             crossorigin="anonymous">
     </script>
 
-    <script src="./js/script.min.js"></script>
-    <script src="./js/pages/financial_models.min.js"></script>
+    <script src="../dist/js/script.min.js"></script>
+    <script src="../dist/js/pages/financial_models.min.js"></script>
 </body>
 </html>

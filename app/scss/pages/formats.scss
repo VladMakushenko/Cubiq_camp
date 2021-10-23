@@ -162,6 +162,10 @@
         }
     }
 
+    @include min-width(1921px) {
+        padding: 150px 0 250px;
+    }
+
     @include min-width($desktop) {
         .budget_grid__item--calculation {
             padding: 55px;

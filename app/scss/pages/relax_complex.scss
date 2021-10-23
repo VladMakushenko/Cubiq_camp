@@ -1,0 +1,35 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+.intro_section {
+    
+    .intro_block__image {
+        background: url('../../img/formats/relax_complex/intro.jpg') no-repeat 0 50% / cover;
+    }
+
+    @include max-width($tablet) {
+        .intro_block__image {
+            background-image: url('../../img/formats/relax_complex/intro--tablet.jpg');
+        }
+    }
+
+    @include max-width($phone) {
+        .intro_block__image {
+            background-image: url('../../img/formats/relax_complex/intro--phone.jpg');
+        }
+    }
+}
+
+.infrastructure {
+
+    .project_features {
+        width: 98%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include max-width($tablet_wide) {
+        .project_features {
+            grid-template-columns: 1fr;
+        }
+    }
+}

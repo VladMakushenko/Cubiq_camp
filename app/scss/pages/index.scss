@@ -91,6 +91,10 @@
         }
     }
 
+    @include min-width(1921px) {
+        padding: 150px 0;
+    }
+
     @include max-width($desktop_medium) {
         .flex_container__item--picture {
             max-width: 60%;
@@ -333,6 +337,12 @@
         }
     }
 
+    @include min-width(1921px) {
+        .options_content {
+            padding: 250px 0;
+        }
+    }
+
     @include max-width($desktop_medium) {
         .options {
 
@@ -523,6 +533,10 @@
         }
     }
 
+    @include min-width(1921px) {
+        padding: 250px 0;
+    }
+
     @include max-width($tablet_wide) {
         padding: 18vw 0;
         
@@ -629,6 +643,10 @@
         &__field:not(:last-child) {
             margin-bottom: 70px;
         }
+    }
+
+    @include min-width(1921px) {
+        padding: 250px 0 150px;
     }
 
     @include max-width($tablet_wide) {

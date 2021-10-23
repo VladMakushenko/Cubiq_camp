@@ -5,7 +5,7 @@
     padding: 10vw 0 8.5vw;
 
     .h1 {
-        max-width: 750px;
+        max-width: 700px;
         font-weight: 100;
         margin-bottom: 6.25vw;
     }
@@ -14,28 +14,31 @@
         max-width: 650px;
         margin-left: 53px;
 
-        &__item {
-            padding-bottom: 5.2vw;
+        &__item:after {
+            content: '';
+            position: absolute;
+            top: 42px;
+            left: -41.5px;
+            width: 1px;
+            height: calc(100% - 50px);
+            border-left: 1px dashed $main_color;
+        }
 
-            &:after {
-                content: '';
-                position: absolute;
-                top: 42px;
-                left: -41.5px;
-                width: 1px;
-                height: calc(100% - 50px);
-                border-left: 1px dashed $main_color;
-            }
+        &__item:not(:last-child) {
+            padding-bottom: 5.2vw;
         }
 
         &__item:last-child:after {
             display: none;
         }
 
+        &__item:before {
+            @include fluid-text($tablet_wide, $desktop, 24px, 30px, 30px, 35px);
+        }
+
         &__item h2 {
             position: relative;
-            font-size: 30px;
-            line-height: 35px;
+            @include fluid-text($tablet_wide, $desktop, 24px, 30px, 30px, 35px);
             font-weight: 100;
             letter-spacing: 0.05em;
             padding-left: 45px;
@@ -54,13 +57,14 @@
         }
 
         &__item p {
+            @include fluid-text($tablet_wide, $desktop, 16px, 20px, 30px, 37px);
             margin-bottom: 1vw;
         }
 
         &__item .subheading {
             position: relative;
             display: inline-block;
-            margin-top: 0.5vw;
+            margin-top: 10px;
 
             &.has_tooltip {
                 cursor: pointer;
@@ -70,7 +74,7 @@
             &.has_tooltip:before {
                 content: '';
                 position: absolute;
-                bottom: 20px;
+                top: -12px;
                 right: 0;
                 width: 27px;
                 height: 27px;
@@ -80,16 +84,127 @@
             }
         }
     }
+
+    @include min-width(1921px) {
+        padding: 190px 0 160px;
+
+        .h1 {
+            margin-bottom: 120px;
+        }
+    }
+
+    @include max-width($tablet_wide) {
+        padding: 20vw 0 12vw;
+
+        .h1 {
+            margin-bottom: 12vw;
+        }
+        
+        .list {
+            max-width: 100%;
+    
+            &__item:not(:last-child) {
+                padding-bottom: 10vw;
+            }
+    
+            &__item:before {
+                @include fluid-text($phone, $tablet_wide, 22px, 30px, 30px, 35px);
+            }
+    
+            &__item h2 {
+                @include fluid-text($phone, $tablet_wide, 22px, 30px, 30px, 35px);
+                margin-bottom: 3vw;
+            }
+    
+            &__item p {
+                @include fluid-text($phone, $tablet_wide, 16px, 20px, 30px, 37px);
+                margin-bottom: 2vw;
+            }
+        }
+    }
+
+    @include max-width($tablet) {
+        padding: 22vw 0 12vw;
+        
+        .list {
+
+            &__item:before {
+                @include fluid-text($phone, $tablet_wide, 22px, 30px, 30px, 35px);
+            }
+    
+            &__item h2 {
+                @include fluid-text($phone, $tablet_wide, 22px, 30px, 30px, 35px);
+                margin-bottom: 3vw;
+            }
+    
+            &__item p {
+                @include fluid-text($phone, $tablet_wide, 16px, 20px, 30px, 37px);
+                margin-bottom: 2vw;
+            }
+
+            &__item .subheading {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    @include max-width($phone) {
+        padding: 30vw 0 24vw;
+
+        .h1 {
+            margin-bottom: 24vw;
+        }
+
+        .list {
+            margin-left: 0;
+    
+            &__item h2 {
+                padding-left: 35px;
+                margin-bottom: 15px;
+            }
+
+            &__item:after,
+            &__item h2:before {
+                display: none;
+            }
+    
+            &__item p {
+                margin-bottom: 3vw;
+            }
+
+            &__item .subheading {
+                font-size: 14px;
+                line-height: 22px;
+                margin-top: 10px;
+
+                &.has_tooltip {
+                    padding-right: 25px;
+                }
+
+                &.has_tooltip:before {
+                    width: 20px;
+                    height: 20px;
+                    background-size: 35%;
+                }
+            }
+        }
+    }
 }
 
 .payment_and_documents {
-    
+    padding: 0 0 8vw;
+
     .inner_wrapper {
         background-color: #FFFFFF;
         padding: 3.6vw 3.1vw 4vw;
 
         h2 {
             margin-bottom: 2vw;
+        }
+
+        h2 + p {
+            max-width: 650px;
+            @include fluid-text($phone, $desktop, 16px, 20px, 30px, 37px);
         }
 
         .subheading {
@@ -112,10 +227,62 @@
                 text-transform: uppercase;
                 display: inline-flex;
                 align-items: center;
-            }
 
-            svg {
-                margin-right: 18px;
+                svg {
+                    flex-shrink: 0;
+                    margin-right: 18px;
+                }
+            }
+        }
+    }
+
+    @include max-width($tablet_wide) {
+        padding: 0 0 12vw;
+
+        .wrapper {
+            padding-right: 0;
+        }
+
+        .inner_wrapper {
+            padding: 8vw 5vw;
+    
+            h2 {
+                @include fluid-text($tablet, $tablet_wide, 35px, 35px, 50px, 50px);
+                margin-bottom: 30px;
+            }
+    
+            .subheading {
+                @include fluid-text($phone, $tablet_wide, 16px, 18px, 22px, 28px);
+                margin: 6vw 0 3vw;
+            }
+    
+            ul {
+                flex-direction: column;
+                max-width: 100%;
+    
+                li {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @include max-width($tablet) {
+        padding: 0 0 90px;
+
+        .wrapper {
+            padding: 0;
+        }
+
+        .inner_wrapper {
+            padding: 6.5vw;
+    
+            h2 {
+                @include fluid-text($phone, $tablet, 25px, 35px, 38px, 50px);
+            }
+    
+            .subheading {
+                margin: 30px 0;
             }
         }
     }

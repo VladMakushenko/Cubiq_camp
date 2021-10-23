@@ -18,10 +18,10 @@
         height: calc(100vh - 8vw);
         max-width: 100%;
         margin-left: auto;
-        background: url('../../img/financial_models_page/START/intro.jpg') no-repeat 0 center / cover;
+        background: url('../../img/financial_models/START/intro.jpg') no-repeat 0 center / cover;
     
         @include set-2x-image {
-            background-image: url('../../img/financial_models_page/START/intro@2x.jpg');
+            background-image: url('../../img/financial_models/START/intro@2x.jpg');
         }
     }
 
@@ -46,7 +46,7 @@
         height: auto;
 
         &__picture {
-            background-image: url('../../img/financial_models_page/START/intro--tablet.jpg');
+            background-image: url('../../img/financial_models/START/intro--tablet.jpg');
             width: calc(100vw - 17.5vw);
             height: 550px;
         }
@@ -70,7 +70,7 @@
 
     @include max-width($phone) {
         &__picture {
-            background-image: url('../../img/financial_models_page/START/intro--phone.jpg');
+            background-image: url('../../img/financial_models/START/intro--phone.jpg');
             height: 632px;
         }
 

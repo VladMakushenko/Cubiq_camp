@@ -12,13 +12,10 @@
 
     <link rel="stylesheet" href="../dist/css/style.min.css">
     <link rel="stylesheet" href="../dist/css/pages/formats_similar_pages.min.css">
+    <link rel="stylesheet" href="../dist/css/pages/weekend_hotel.min.css">
 </head>
 
 <body>
-
-    
-
-    <!-- temporarily -->
     <header class="header">
         <a href="/" class="header__logo">
             <img src="./img/cubiq_camp.svg" alt="cubiq.camp">
@@ -52,9 +49,6 @@
         </nav>
     </header>
 
-    
-    
-    <!-- temporarily -->
     <div id="page_navigator" class="page_navigator">
         <div class="page_navigator__content">
             <span class="page_navigator__name">Форматы</span>
@@ -134,9 +128,9 @@
 
                 <div class="flex_container">
                     <picture class="flex_container__item flex_container__item--picture">
-                        <source media="(max-width: 500px)" srcset="./img/formats/weekend_hotel_page/land_plot--phone.jpg">
-                        <source media="(max-width: 768px)" srcset="./img/formats/weekend_hotel_page/land_plot--tablet.jpg">
-                        <img src="./img/formats/weekend_hotel_page/land_plot.jpg" alt="Отель выходного дня — участок" title="Отель выходного дня — участок">
+                        <source media="(max-width: 500px)" srcset="./img/formats/weekend_hotel/land_plot--phone.jpg">
+                        <source media="(max-width: 768px)" srcset="./img/formats/weekend_hotel/land_plot--tablet.jpg">
+                        <img src="./img/formats/weekend_hotel/land_plot.jpg" alt="Отель выходного дня — участок" title="Отель выходного дня — участок">
                     </picture>
                     <div class="flex_container__item flex_container__item--text">
                         <ul>
@@ -220,16 +214,17 @@
                     </li>
                 </ul>
 
-                <small><sup>1</sup> покупка модулей, их доставка и сборка, подключение коммуникаций, найм персонала,<br> продвижение, другие затраты</small>
+                <small class="desktop"><sup>1</sup> покупка модулей, их доставка и сборка, подключение коммуникаций, найм персонала, продвижение, другие затраты</small>
+                <small class="mobile">* Возможно приобретение модулей в лизинг или рассрочку. Включает первоначальный взнос 25% или 50% соответственно и 100% оплату доставки и сборки</small>
 
                 <div class="investment_pictures">
                     <picture class="flex_container__item flex_container__item--picture">
-                        <source media="(max-width: 500px)" srcset="./img/formats/weekend_hotel_page/investment_01--phone.jpg">
-                        <source media="(max-width: 1024px)" srcset="./img/formats/weekend_hotel_page/investment_01--tablet.jpg">
-                        <img src="./img/formats/weekend_hotel_page/investment_01.jpg" alt="" title="">
+                        <source media="(max-width: 500px)" srcset="./img/formats/weekend_hotel/investment_01--phone.jpg">
+                        <source media="(max-width: 1024px)" srcset="./img/formats/weekend_hotel/investment_01--tablet.jpg">
+                        <img src="./img/formats/weekend_hotel/investment_01.jpg" alt="Отель выходного дня — участок">
                     </picture>
                     <picture class="flex_container__item flex_container__item--picture">
-                        <img src="./img/formats/weekend_hotel_page/investment_02.jpg" alt="" title="">
+                        <img src="./img/formats/weekend_hotel/investment_02.jpg" alt="Отель выходного дня — участок">
                     </picture>
                 </div>
             </div>
@@ -270,11 +265,11 @@
                     <li>
                         <p><span class="number">189</span> %</p>
                         <p>рентабельность<br> инвестиций</p>
-                        <span>показывает, что инвестиции в 21 млн Р<br> через 5 лет принесут 40 млн Р прибыли</span>
+                        <span>показывает, что инвестиции в 21 млн&nbsp;Р<br> через 5 лет принесут 40 млн Р прибыли</span>
                     </li>
                 </ul>
 
-                <small>Расчет выполнен по средним значениям без учета налогов, точные показатели зависят<br> от региона, локации, условий участка, персонала, фонда оплаты труда и других факторов</small>
+                <small>* Расчет выполнен по средним значениям без учета налогов, точные показатели зависят от региона, локации, условий участка, персонала, фонда оплаты труда и других факторов</small>
             </div>
         </article>
 
@@ -285,7 +280,7 @@
                         <h2 class="h2--uppercase">Доходы и расходы за 5 лет</h2>
                         <p>при покупке в рассрочку</p>
 
-                        <table>
+                        <table class="desktop_table">
                             <thead>
                                 <tr>
                                     <th></th>
@@ -323,6 +318,55 @@
                                     <td>12</td>
                                     <td>12</td>
                                     <td>12</td>
+                                    <td>40</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="mobile_table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>расходы</th>
+                                    <th>доходы</th>
+                                    <th>прибыль</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1 год</td>
+                                    <td>23</td>
+                                    <td>15</td>
+                                    <td>-8</td>
+                                </tr>
+                                <tr>
+                                    <td>2 год</td>
+                                    <td>3</td>
+                                    <td>15</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>3 год</td>
+                                    <td>3</td>
+                                    <td>15</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>4 год</td>
+                                    <td>3</td>
+                                    <td>15</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>5 год</td>
+                                    <td>3</td>
+                                    <td>15</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>итог</td>
+                                    <td>35</td>
+                                    <td>75</td>
                                     <td>40</td>
                                 </tr>
                             </tbody>
@@ -366,7 +410,6 @@
                                 <figure>
                                     <picture class="swiper-slide__picture">
                                         <source media="(max-width: 500px)" srcset="./img/formats/slider/camping--phone.jpg">
-                                        <!-- <source media="(max-width: 1024px)" srcset="./img/formats/slider/camping--tablet.jpg"> -->
                                         <img src="./img/formats/slider/camping.jpg" alt="Охотничий или рыболовный кемпинг" title="Охотничий или рыболовный кемпинг">
                                     </picture>
                                     <figcaption class="swiper-slide__name">
@@ -383,7 +426,6 @@
                                 <figure>
                                     <picture class="swiper-slide__picture">
                                         <source media="(max-width: 500px)" srcset="./img/formats/slider/ski_resort--phone.jpg">
-                                        <!-- <source media="(max-width: 1024px)" srcset="./img/formats/slider/ski_resort--tablet.jpg"> -->
                                         <img src="./img/formats/slider/ski_resort.jpg" alt="Горнолыжная деревня" title="Горнолыжная деревня">
                                     </picture>
                                     <figcaption class="swiper-slide__name">
@@ -400,7 +442,6 @@
                                 <figure>
                                     <picture class="swiper-slide__picture">
                                         <source media="(max-width: 500px)" srcset="./img/formats/slider/relax_complex--phone.jpg">
-                                        <!-- <source media="(max-width: 1024px)" srcset="./img/formats/slider/relax_complex--tablet.jpg"> -->
                                         <img src="./img/formats/slider/relax_complex.jpg" alt="Пляжный Relax комплекс" title="Пляжный Relax комплекс">
                                     </picture>
                                     <figcaption class="swiper-slide__name">
@@ -417,7 +458,6 @@
                                 <figure>
                                     <picture class="swiper-slide__picture">
                                         <source media="(max-width: 500px)" srcset="./img/formats/slider/holiday_resort--phone.jpg">
-                                        <source media="(max-width: 1024px)" srcset="./img/formats/slider/holiday_resort--tablet.jpg">
                                         <img src="./img/formats/slider/holiday_resort.jpg" alt="База активного отдыха" title="База активного отдыха">
                                     </picture>
                                     <figcaption class="swiper-slide__name">
@@ -434,7 +474,6 @@
                                 <figure>
                                     <picture class="swiper-slide__picture">
                                         <source media="(max-width: 500px)" srcset="./img/formats/slider/residence--phone.jpg">
-                                        <source media="(max-width: 1024px)" srcset="./img/formats/slider/residence--tablet.jpg">
                                         <img src="./img/formats/slider/residence.jpg" alt="Резиденция для мероприятий" title="Резиденция для мероприятий">
                                     </picture>
                                     <figcaption class="swiper-slide__name">
@@ -451,7 +490,6 @@
                                 <figure>
                                     <picture class="swiper-slide__picture">
                                         <source media="(max-width: 500px)" srcset="./img/formats/slider/luxury_hotel--phone.jpg">
-                                        <source media="(max-width: 1024px)" srcset="./img/formats/slider/luxury_hotel--tablet.jpg">
                                         <img src="./img/formats/slider/luxury_hotel.jpg" alt="Luxury отель" title="Luxury отель">
                                     </picture>
                                     <figcaption class="swiper-slide__name">
@@ -468,7 +506,6 @@
                                 <figure>
                                     <picture class="swiper-slide__picture">
                                         <source media="(max-width: 500px)" srcset="./img/formats/slider/boarding_house--phone.jpg">
-                                        <source media="(max-width: 1024px)" srcset="./img/formats/slider/boarding_house--tablet.jpg">
                                         <img src="./img/formats/slider/boarding_house.jpg" alt="Санаторно-оздоровительный центр" title="Санаторно-оздоровительный центр">
                                     </picture>
                                     <figcaption class="swiper-slide__name">
@@ -488,9 +525,6 @@
         </article>
     </main>
 
-    
-
-    <!-- temporarily -->
     <footer class="footer">
         <div class="wrapper">
             <div class="footer_block footer_block--column footer_block--contact_information">

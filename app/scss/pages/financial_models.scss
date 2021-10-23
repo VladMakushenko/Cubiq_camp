@@ -246,6 +246,10 @@
         }
     }
 
+    @include min-width(1921px) {
+        padding: 200px 0;
+    }
+
     @include max-width($tablet_wide) {
         padding: 9.5vw 0 16vw;
 
@@ -339,6 +343,14 @@
         margin-bottom: 4vw;
     }
 
+    .swiper-slide:nth-child(3) img {
+        object-position: right !important;
+    }
+
+    @include min-width(1921px) {
+        padding-bottom: 200px;
+    }
+
     @include max-width($tablet_wide) {
         padding-bottom: 50px;
 
@@ -398,7 +410,7 @@
     }
 
     @include max-width($phone) {
-        padding-bottom: 15vw;
+        padding-bottom: 25vw;
 
         .wrapper {
             padding: 0;
@@ -411,7 +423,7 @@
         .formats_slider {
 
             .swiper-slide {
-                margin-bottom: 30px;
+                margin-bottom: 20px;
             }
 
             .swiper-slide__picture {

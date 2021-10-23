@@ -1,34 +1,16 @@
 @import '../utils/mixins';
 @import '../utils/vars';
 
-.header {
-    &__phone {
-        color: #FFFFFF;
-        font-weight: 400;
-    }
-
-    .socials_list path {
-        fill: #FFFFFF;
-    }
-
-    @include max-width($tablet_wide) {
-        &__phone {
-            color: $main_color;
-            font-weight: 300;
-        }
-    
-        .socials_list path {
-            fill: #161C23;
-        }
-    }
-}
-
 /* h2 common style */
 .h2 {
     @include fluid-text($tablet_wide, $desktop, 30px, 40px, 45px, 55px);
 
     @include max-width($tablet_wide) {
         @include fluid-text($tablet, $tablet_wide, 30px, 40px, 45px, 55px);
+    }
+
+    @include max-width($tablet) {
+        @include fluid-text($phone, $tablet, 25px, 30px, 38px, 45px);
     }
 }
 
@@ -52,7 +34,7 @@
         }
     
         &__image {
-            background: url('../../img/formats/weekend_hotel_page/intro.jpg') no-repeat 0 50% / cover;
+            // background: url('../../img/formats/weekend_hotel/intro.jpg') no-repeat 0 50% / cover;
             width: 58vw;
             height: 100%;
             flex-shrink: 0;
@@ -71,7 +53,7 @@
                 margin-bottom: 6vw;
 
                 .h1 {
-                    margin-bottom: 4vw;
+                    margin-bottom: 40px;
                 }
             }
 
@@ -93,7 +75,7 @@
             }
 
             &__image {
-                background-image: url('../../img/formats/weekend_hotel_page/intro--tablet.jpg');
+                // background-image: url('../../img/formats/weekend_hotel/intro--tablet.jpg');
                 background-position: center;
                 height: 600px;
             }
@@ -101,15 +83,22 @@
     }
 
     @include max-width($phone) {
-        // .intro_block {
-        //     padding-top: 25vw;
+        .intro_block {
+            padding-top: 32vw;
 
-        //     &__image {
-        //         background-image: url('../../img/formats_page/intro--phone.jpg');
-        //         height: 42vh;
-        //         min-height: 433px;
-        //     }
-        // }
+            &__text {
+                margin-bottom: 12vw;
+
+                .h1 {
+                    margin-bottom: 25px;
+                }
+            }
+
+            &__image {
+                // background-image: url('../../img/formats/weekend_hotel/intro--phone.jpg');
+                height: 466px;
+            }
+        }
     }
 }
 
@@ -143,6 +132,15 @@
                 margin-bottom: 15px;
             }
 
+            .subheading + .subheading {
+                display: block;
+                margin-top: -15px;
+
+                &:before {
+                    display: none;
+                }
+            }
+
             em {
                 font-style: normal;
                 font-weight: 300;
@@ -157,6 +155,10 @@
             p {
                 @include fluid-text($tablet_wide, $desktop, 16px, 18px, 24px, 28px);
                 margin-bottom: 10px;
+            }
+
+            p:not(:first-of-type) {
+                @include fluid-text($tablet_wide, $desktop, 14px, 16px, 22px, 26px);
             }
 
             &--brings_income {
@@ -178,9 +180,17 @@
         }
     }
 
+    @include min-width(1921px) {
+        padding: 120px 0 240px;
+    }
+
     @include max-width($desktop_medium) {
         .project_features {
             width: 95%;
+
+            &__item {
+                padding-left: 110px;
+            }
 
             svg {
                 width: 80px;
@@ -215,6 +225,58 @@
     
                 p {
                     @include fluid-text($phone, $tablet, 16px, 18px, 24px, 28px);
+                }
+            }
+        }
+    }
+
+    @include max-width($phone) {
+        padding: 14vw 0 18vw;
+
+        .brings_income {
+            svg {
+                width: 30px;
+                margin-right: 5px;
+            }
+        }
+
+        .project_features {
+            width: 100%;
+            margin-top: 18vw;
+
+            svg {
+                width: 60px;
+                height: 60px;
+            }
+
+            &__item {
+                padding-left: 80px;
+    
+                .subheading {
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+    
+                p {
+                    margin-left: -75px;
+
+                    &:first-of-type {
+                        margin-top: 20px;
+                    }
+
+                    &:not(:first-of-type) {
+                        font-size: 14px;
+                        line-height: 22px;
+                    }
+                }
+
+                &--brings_income .subheading {
+                    padding-right: 45px;
+                }
+
+                &--brings_income .subheading:before {
+                    width: 30px;
+                    height: 30px;
                 }
             }
         }
@@ -263,6 +325,10 @@
             flex-shrink: 0;
             margin-right: 30px;
         }
+    }
+
+    @include min-width(1921px) {
+        padding-bottom: 140px;
     }
 
     @include max-width($desktop_medium) {
@@ -337,6 +403,36 @@
             @include fluid-text($phone, $tablet, 16px, 18px, 28px, 30px);
         }
     }
+
+    @include max-width($phone) {
+        padding-bottom: 50px;
+        
+        .h2 {
+            margin-bottom: 40px;
+        }
+
+        .flex_container {
+
+            &__item--picture {
+                height: 327px;
+            }
+    
+            &__item--text {
+                margin-bottom: 40px;
+            }
+        }
+
+        ul {
+
+            li:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            li svg {
+                margin-right: 20px;
+            }
+        } 
+    }
 }
 
 .investment,
@@ -345,7 +441,7 @@
     &:before {
         content: '';
         position: absolute;
-        top: -18%;
+        top: -20%;
         right: 0;
         width: 25%;
         height: 100%;
@@ -360,7 +456,7 @@
         width: 75%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 5vw 2.5vw;
+        grid-gap: 5vw;
 
         li {
             @include fluid-text($tablet_wide, $desktop, 14px, 20px, 22px, 31px);
@@ -372,7 +468,7 @@
 
         span {
             display: inline-block;
-            @include fluid-text($tablet_wide, $desktop, 14px, 16px, 22px, 24px);
+            @include fluid-text($tablet_wide, $desktop, 12px, 16px, 22px, 24px);
             letter-spacing: 0.02em;
         }
 
@@ -394,23 +490,40 @@
         display: inline-block;
         @include fluid-text($tablet_wide, $desktop, 14px, 16px, 22px, 24px);
         letter-spacing: 0.02em;
+        width: 50%;
 
         sup {
             margin-left: -8px;
         }
     }
 
-    @include max-width($desktop) {
-        &:before {
-            background-position: left 50px top;
-        }
+    small.mobile {
+        display: none;
+    }
 
+    @include min-width(1921px) {
+        .h2 {
+            margin-bottom: 90px;
+        }
+    
+        ul {
+            grid-gap: 100px;
+        }
+    }
+
+    @include max-width($desktop) {
         .h2 {
             margin-bottom: 4vw;
         }
 
         ul {
-            grid-gap: 3vw 2.5vw;
+            grid-gap: 3.5vw;
+        }
+    }
+
+    @include max-width($desktop_medium) {
+        &:before {
+            background-position: right -250px top;
         }
     }
 
@@ -470,6 +583,7 @@
 
         small {
             @include fluid-text($phone, $tablet_wide, 15px, 16px, 22px, 24px);
+            width: 100%;
         }
     }
 
@@ -481,7 +595,7 @@
         ul {
     
             li {
-                @include fluid-text($phone, $tablet, 15px, 20px, 28px, 30px);
+                @include fluid-text($phone, $tablet, 18px, 20px, 28px, 30px);
             }
     
             span {
@@ -495,6 +609,25 @@
             .number {
                 @include fluid-text($phone, $tablet, 50px, 60px, 58px, 70px);
             }
+        }
+    }
+
+    @include max-width($phone) {
+        .h2 {
+            margin-bottom: 40px;
+        }
+
+        ul {
+            grid-template-columns: 1fr;
+            grid-gap: 10vw;
+        }
+
+        small.desktop {
+            display: none;
+        }
+
+        small.mobile {
+            display: inline-block;
         }
     }
 }
@@ -524,6 +657,14 @@
                 height: 100%;
                 object-fit: cover;
             }
+        }
+    }
+
+    @include min-width(1921px) {
+        padding-bottom: 120px;
+
+        small {
+            margin: 140px 0 80px;
         }
     }
 
@@ -574,6 +715,16 @@
             padding: 0 6.5vw;
         }
     }
+
+    @include max-width($phone) {
+        ul {
+            margin-bottom: 14vw;
+        }
+
+        small {
+            margin: 0 0 10vw;
+        }
+    }
 }
 
 .efficiency {
@@ -581,6 +732,14 @@
 
     small {
         margin: 7vw 0 0;
+    }
+
+    @include min-width(1921px) {
+        padding-bottom: 100px;
+
+        small {
+            margin: 150px 0 50px;
+        }
     }
 
     @include max-width($desktop_medium) {
@@ -602,6 +761,12 @@
             margin: 14vw 0 9vw;
         }
     }
+
+    @include max-width($phone) {
+        small {
+            margin: 14vw 0;
+        }
+    }
 }
 
 .profitability {
@@ -620,7 +785,7 @@
             @include fluid-text($tablet_wide, $desktop, 18px, 20px, 26px, 28px);
         }
 
-        table {
+        .desktop_table {
             border-collapse: collapse;
             margin: 5vw 0;
 
@@ -657,6 +822,10 @@
                 }
             }
         }
+
+        .mobile_table {
+            display: none;
+        }
         
         .conditions {
             font-size: 16px;
@@ -666,6 +835,11 @@
 
             .list__item {
                 padding-left: 20px;
+            }
+
+            .list__item:before {
+                width: 8px;
+                height: 9px;
             }
         }
 
@@ -698,7 +872,7 @@
         .inner_wrapper {
             padding: 100px;
 
-            table {
+            .desktop_table {
     
                 thead th {
                     padding: 0 25px 25px;
@@ -727,7 +901,7 @@
                 margin-left: 4vw;
             }
 
-            table {
+            .desktop_table {
 
                 tbody td {
                     padding: 0.8vw;
@@ -757,9 +931,9 @@
                 @include fluid-text($tablet, $tablet_wide, 18px, 20px, 26px, 28px);
             }
     
-            table {
+            .desktop_table {
                 width: 100%;
-                margin: 8vw 0 11vw;
+                margin: 9vw 0 0;
 
                 thead th {
                     @include fluid-text($tablet, $tablet_wide, 15px, 20px, 22px, 27px);
@@ -779,8 +953,11 @@
                     }
                 }
             }
+
+            .conditions {
+                margin: 9vw 0;
+            }
     
-            .conditions,
             .download_pdf {
                 display: none;
             }
@@ -808,7 +985,7 @@
                 @include fluid-text($phone, $tablet, 18px, 20px, 26px, 28px);
             }
     
-            table {
+            .desktop_table {
                 margin: 8vw 0 11vw;
 
                 thead th {
@@ -831,6 +1008,81 @@
             }
         }
     }
+
+    @include max-width($phone) {
+        .inner_wrapper {
+            padding: 9vw 6.5vw;
+
+            .flex_container__item:first-child {
+                h2 {
+                    max-width: 85%;
+                }
+            }
+
+            .desktop_table {
+                display: none;
+            }
+    
+            .mobile_table {
+                display: table;
+                width: 100%;
+                border-collapse: collapse;
+                margin: 10vw 0;
+
+                tbody:before {
+                    content: "0";
+                    display: block;
+                    line-height: 15px;
+                    text-indent:-99px;
+                }
+    
+                thead th {
+                    font-weight: 300;
+                    padding: 15px 8px;
+                }
+                
+                thead tr {
+                    border-bottom: 0.5px solid rgba(#000000, 0.7);
+                }
+
+                tbody tr:last-child {
+
+                    td {
+                        vertical-align: bottom;
+                        font-weight: 600;
+                        padding-bottom: 0;
+                    }
+                }
+    
+                tbody td {
+    
+                    &:not(:first-child) {
+                        text-align: center;
+                        font-size: 18px;
+                        line-height: 18px;
+                        padding: 25px 0;
+                    }
+    
+                    &:first-child {
+                        border-right: 0.5px solid rgba(#000000, 0.7);
+                        font-size: 16px;
+                        line-height: 16px;
+                        padding-right: 10px;
+                    }
+                }
+            }
+
+            .conditions {
+                font-size: 15px;
+                line-height: 22px;
+                margin: 14vw 0;
+            }
+
+            img {
+                margin-top: 40px;
+            }
+        }
+    }
 }
 
 .other_formats {
@@ -845,10 +1097,14 @@
     }
 
     @include max-width($tablet_wide) {
-        padding: 10vw 0;
+        padding: 10vw 0 5vw;
 
         .wrapper {
             padding-right: 0;
+        }
+
+        .formats_slider {
+            padding-bottom: 100px !important;
         }
 
         .swiper-wrapper {
@@ -856,38 +1112,98 @@
         }
 
         .swiper-slide {
-            width: calc(100% / 3) !important;
-            flex-shrink: 1;
+            transition: width 500ms ease-in-out;
+            width: calc(100% / 3 - 4px) !important;
             margin-bottom: 0;
 
+            &__picture {
+                cursor: pointer !important;
+                height: 60vw;
+            }
+
+            &__name {
+                position: absolute;
+            }
+
+            &__title {
+                @include fluid-text($tablet, $tablet_wide, 14px, 18px, 22px, 28px);
+                font-weight: 500;
+
+            }
+    
+            &__line {
+                display: none;
+            }
+    
+            &__description {
+                display: none;
+            }
         }
 
-        .swiper-slide:nth-child(1),
-        .swiper-slide:nth-child(2) {
-            margin-right: 8px;
-        }
-
-        .swiper-slide:nth-child(n+4) {
-            display: none;
-        }
-
-        .swiper-slide__picture {
-            height: 60vw;
-        }
-
-        .swiper-slide__description {
-            display: none;
-        }
-
-        .swiper-slide__title {
-            @include fluid-text($tablet, $tablet_wide, 14px, 18px, 22px, 28px);
-            font-weight: 500;
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: block;
+            top: calc(50% - (48px / 2) - (100px / 2)) !important;
         }
     }
 
     @include max-width($tablet) {
         .swiper-slide__name {
             margin: 10px 0 0;
+        }
+    }
+
+    @include max-width($phone) {
+        padding: 10vw 0;
+
+        .wrapper {
+            padding: 0;
+        }
+
+        .h2 {
+            margin-left: 25px;
+        }
+
+        .formats_slider {
+            padding-bottom: 0 !important;
+        }
+
+        .swiper-wrapper {
+            flex-direction: column;
+        }
+
+        .swiper-slide {
+            background-color: $section_background_color !important;
+            transition: none !important;
+            width: 100% !important;
+            margin-bottom: 15px;
+
+            &:nth-child(n + 4) {
+                display: none;
+            }
+
+            &__picture {
+                height: 50vw;
+            }
+
+            &__name {
+                position: initial;
+                margin: 8px 25px 0;
+
+                br {
+                    display: none;
+                }
+            }
+
+            &__title {
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none !important;
         }
     }
 }
